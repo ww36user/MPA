@@ -1,0 +1,78 @@
+euroSAT_des1 = [
+                'This class represents areas where crops are planted and harvested annually. In satellite images, it is typically identified by areas of regularly tilled soil and a consistent pattern of crop rotation. The land often appears as patches of green in the growing season, followed by bare soil or different crop types in subsequent seasons.',
+                'Forests are characterized by dense tree coverage, often appearing as large, continuous patches of green in satellite imagery. The canopy cover can vary in density, with variations in color depending on the season and the type of trees present. Forests play a crucial role in carbon storage and biodiversity.',
+                'This category includes areas covered by non-woody plants like grasses, herbs, and small shrubs. In satellite imagery, these regions often show lighter green or yellowish tones, especially during the growing season. Herbaceous vegetation is typically found in open fields, meadows, and grasslands.',
+                'Highways in satellite images appear as linear structures, often marked by wide, paved surfaces with visible lanes, sometimes with surrounding infrastructure like interchanges or bridges. The areas surrounding highways often show little vegetation or are disturbed due to construction.',
+                'Industrial zones are identifiable in satellite imagery by large, clustered structures such as factories, warehouses, and power plants. These areas often exhibit a lack of natural vegetation, with large expanses of paved surfaces, roads, and significant man-made features.',
+                'Pastures appear as areas of relatively uniform vegetation, typically grassland, in satellite images. These areas are often located in rural regions, and the land is used for grazing livestock. The vegetation in pastureland can appear as varying shades of green, depending on the season.',
+                'Permanent crops like orchards, vineyards, or olive groves are identified in satellite images by regularly spaced rows of plants or trees. These areas may show seasonal color changes depending on the type of crop, with more distinct patterns than annual crop areas due to the longer-term planting arrangements.',
+                'Residential areas are marked by dense clusters of buildings, streets, and roads. In satellite images, these areas appear as urban environments with a variety of building shapes and patterns. Residential zones are typically well-connected to surrounding infrastructure such as schools, parks, and retail areas.',
+                'Rivers are identified in satellite imagery by their continuous, winding water paths. These areas often appear as blue or dark streaks and can be distinguished from lakes by their flow direction. The surrounding land may show vegetation or man-made structures like bridges.',
+                'Seas and lakes appear as large bodies of water, typically blue or dark in color, and are surrounded by coastal or land areas. The boundary between land and water is often a defining feature, with coastal regions exhibiting more natural vegetation or man-made infrastructure.'
+            ]
+            euroSAT_des2 = [
+                'Areas used for crops that are planted and harvested each year, easily recognized in satellite images by distinct tilled soil patterns and crop rotation. During the growing season, fields show green patches, later turning bare or transitioning to other crops.',
+                'Dense, continuous areas covered by trees, forests appear as green patches in satellite images, with canopy density and color varying by season and tree type. Key for carbon storage and biodiversity.',
+                'Land dominated by non-woody plants like grasses and shrubs. In satellite images, these areas often appear light green or yellowish, especially in the growing season, and are found in meadows, fields, or wetlands.',
+                'Long, paved routes with visible lanes, seen as linear features in satellite images. Highways are often connected to interchanges or surrounded by minimal vegetation and construction areas.',
+                'Clusters of large buildings like factories and warehouses, seen in satellite images as paved and developed zones with little vegetation. Industrial areas contain distinct infrastructure for production.',
+                'Uniform vegetation areas used for grazing livestock. In satellite images, pastures appear as green fields with shades varying by season and are often found in rural regions.',
+                'Long-term crop areas such as orchards and vineyards, identified in satellite images by regularly spaced rows of plants. Seasonal color changes depend on crop type, unlike annually tilled fields.',
+                'Urban areas with dense building clusters and roads, forming distinct neighborhoods. Seen in satellite images as structured zones linked to infrastructure like schools and parks.',
+                'Winding watercourses that stand out in satellite images as blue or dark streaks. Rivers flow through landscapes, surrounded by vegetation or man-made crossings like bridges.',
+                'Large bodies of water, either coastal (seas) or inland (lakes), seen in satellite images as blue expanses. These areas are bordered by natural landscapes or built environments along the water’s edge.'
+            ]
+            euroSAT_des3 = [
+                'Regions dedicated to annually cultivated crops, visible in satellite imagery by distinct patterns of tilled soil and seasonal crop changes. During the growth period, these areas appear green, later showing bare soil or different crops as rotations occur.',
+                'Forested zones with dense tree coverage, appearing as large green patches in satellite views. The canopy varies by density and color depending on the season and tree type, essential for ecosystem balance and carbon capture.',
+                'Areas covered by grasses, herbs, and low-lying plants. In satellite images, they often display a lighter green or yellow hue during growth, common in open fields, grasslands, or pastures.',
+                'Major roadways identified by long, linear shapes in satellite images, typically featuring multiple lanes and infrastructure like exits or overpasses. Highways are surrounded by sparse vegetation or construction areas.',
+                'Industrial sites, characterized by extensive buildings like factories and storage facilities. Seen in satellite images as clusters with minimal greenery, these areas are dominated by paved surfaces and industrial installations.',
+                'Fields primarily used for livestock grazing, showing consistent green cover across large, open spaces. In satellite images, pasturelands appear with varying green shades depending on the season, often in rural areas.',
+                'Regions with long-term crops such as vineyards and orchards, visible in satellite imagery by regular rows of plants or trees. Unlike annual crops, these areas are more permanent and exhibit seasonal changes in color.',
+                'Residential zones densely packed with buildings and roads. In satellite imagery, they appear as organized urban spaces with visible connections to surrounding amenities like parks and schools.',
+                'Flowing water bodies like rivers, identifiable as winding, dark or blue paths. They cut through landscapes and may be flanked by vegetation or man-made structures such as bridges.',
+                'Expansive water bodies such as lakes or seas, shown in satellite images as large blue areas. These are often bordered by coastlines or natural landscapes, with distinct boundaries where water meets land.'
+            ]
+            euroSAT_des4 = [
+                'Cultivated areas where crops are grown and harvested every year, visible in satellite images by regularly plowed soil and crop rotation patterns. These regions appear green during the growing season, with bare soil or different crops taking their place later.',
+
+                'Wooded areas with a dense tree canopy, which show up as vast, continuous green patches in satellite images. The density and color of the trees change with the seasons, contributing to environmental balance and carbon sequestration.',
+
+                'Lands covered by grasses, plants, and small bushes. These areas often appear light green or yellowish in satellite imagery, particularly during the growing period, and are typically found in meadows, grasslands, or open fields.',
+
+                'Major transportation routes visible as long, straight lines in satellite images, usually featuring wide, paved surfaces with clearly marked lanes. Highways tend to be surrounded by little vegetation or disrupted land from construction activities.',
+
+                'Commercial and manufacturing zones, easily identifiable by large clusters of industrial buildings like factories and warehouses. These areas lack significant vegetation and are filled with paved roads and extensive man-made structures.',
+
+                'Grass-covered regions used for the grazing of livestock. In satellite imagery, pastures look like large, green areas with slight variations in shade depending on the season, typically found in rural or agricultural landscapes.',
+
+                'Areas where permanent crops like orchards, vineyards, and groves are grown, marked by consistently spaced rows of plants or trees. These zones are more stable and have more distinct seasonal color changes compared to annual crop areas.',
+
+                'Urban districts with a high density of buildings and roads. In satellite images, residential areas are identifiable by their compact structure, with a network of streets and nearby amenities such as parks, schools, and retail spaces.',
+
+                'Flowing bodies of water such as rivers, which appear as winding, narrow blue or dark lines in satellite imagery. Rivers are often surrounded by lush vegetation or man-made structures, including bridges or dams.',
+
+                'Large water bodies such as lakes and seas, which show up as expansive blue areas in satellite images. These bodies of water are surrounded by coastal areas or land, often with distinct boundaries between land and water.'
+            ]
+            euroSAT_des5 = [
+                'Regions cultivated annually for crops, often seen in satellite images with freshly plowed soil and systematic crop rotation patterns. These areas turn green during growing periods, followed by bare earth or new crops as seasons change.',
+
+                'Areas dominated by thick tree cover, appearing in satellite images as expansive green patches. The foliage density fluctuates with seasonal changes, and forests are key to maintaining biodiversity and absorbing carbon.',
+
+                'Open fields or meadows filled with grasses, herbs, and smaller plants. These areas are marked by light greens or yellowish tones, particularly visible in growing seasons, and can be found in rural or semi-natural landscapes.',
+
+                'Long, paved routes visible as continuous lines, typically with clear lanes and often associated with minimal surrounding vegetation. These highways stand out due to their artificial surfaces and infrastructure.',
+
+                'Areas housing manufacturing and commercial operations, with large factories, plants, and warehouses. Satellite images show expansive concrete or asphalt areas, with little to no natural greenery.',
+
+                'Flat grasslands where livestock graze. In satellite imagery, pastures look like broad, verdant fields with shades of green changing with the season, and they are commonly found in agricultural or rural areas.',
+
+                'Lands devoted to crops that do not need annual replanting, such as orchards and vineyards. These areas are easy to identify in satellite images due to their regular rows of trees or plants, and they exhibit distinct seasonal color shifts.',
+
+                'Urban spaces with dense clusters of buildings, streets, and roads. Residential areas in satellite imagery are marked by tightly packed structures and a complex road network, often with nearby amenities like schools and shops.',
+
+                'Winding waterways, identifiable in satellite images by their curving paths. Rivers appear as narrow, flowing blue lines, and their banks may be populated with vegetation or infrastructural features like bridges.',
+
+                'Large expanses of water, like lakes and seas, typically depicted in satellite imagery as vast blue regions. These bodies of water are bordered by coastal land, creating clear distinctions between land and water.'
+            ]

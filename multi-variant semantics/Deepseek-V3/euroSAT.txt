@@ -1,0 +1,60 @@
+euroSAT_des1 = [
+    "AnnualCrop: Patchwork fields with varying shades of green/yellow/brown, geometric boundaries, and distinct growth patterns. Often shows parallel planting rows or irregular harvest stages.",
+    "Forest: Dense green canopy with textured appearance, uniform or mixed tones. Deciduous forests may show seasonal color shifts, while coniferous stays dark green year-round.",
+    "HerbaceousVegetation: Open areas with fine-grained texture, mixing greens/tans. Irregular natural patterns, often transitional between fields/forests. May show wetland vegetation near water.",
+    "Highway: Thin linear structures with gray/black surfaces, visible lane markings. Intersections show complex geometries. Vehicles appear as tiny moving dots during daytime.",
+    "Industrial: Large rectangular buildings with metal roofs (bright/silver), parking lots, storage yards. Often has smokestacks, pipelines, and distinctive infrastructure patterns.",
+    "Pasture: Smooth green expanses with fencing divisions. May contain livestock as small dots. Healthier pastures appear vibrant green, drier ones show brownish tones.",
+    "PermanentCrop: Organized rows of trees/vines forming geometric patterns. Orchards show evenly spaced dots, vineyards display parallel lines. Consistent appearance year-round.",
+    "Residential: Clusters of small rectangular roofs (red/black/gray), connected by road networks. Visible driveways, gardens, and community spaces. Density varies urban/suburban.",
+    "River: Snaking blue/dark lines through landscape, widening/narrowing. Shows meanders, oxbows, and tributaries. Muddy rivers appear brown, clear water reflects surroundings.",
+    "SeaLake: Large blue water bodies with smooth surfaces. Coastlines show beaches/cliffs. Lakes have defined shores, while seas extend beyond image. Waves/currents may create patterns."
+]
+euroSAT_des2 = [
+    "AnnualCrop: Multispectral analysis reveals periodic NDVI fluctuations with distinctive row patterns (5-15m spacing) in visible/NIR bands. Texture metrics show medium entropy (0.6-0.8) with regular edge density.",
+    "Forest: High canopy closure (>70%) evident in LiDAR returns. Spectral mixture analysis indicates 3-5 endmembers in SWIR. Fractal dimension >2.3 distinguishes from lower vegetation.",
+    "HerbaceousVegetation: Heterogeneous pixel variance in red-edge (700-730nm). Modified soil-adjusted vegetation index (MSAVI) values intermediate between bare soil and dense vegetation.",
+    "Highway: Linear feature extraction yields width 20-30m with asphalt reflectance (ρ≈0.1-0.15 in VIS). Traffic flow detectable via temporal change detection (0.5-2% pixel variation/min).",
+    "Industrial: Rectilinear shape metrics (rectangularity >0.85) with high albedo roofs (ρ>0.6). Thermal band anomalies (ΔT +5-10K) indicate industrial activity hotspots.",
+    "Pasture: Uniform backscatter in SAR (σ° -12 to -8dB) with occasional point targets (livestock). NDVI temporal profile shows seasonal growth cycles without abrupt changes.",
+    "PermanentCrop: Periodic spatial patterns detectable via Fourier analysis (0.01-0.05 cycles/m). Woody biomass signatures in winter months distinguish from annual crops.",
+    "Residential: Built-up index >0.5 with shadow patterns indicating structure height. Road network connectivity visible at 10m scale via morphological operators.",
+    "River: Specular reflection dominant in calm sections, with texture features correlating to stream order (Strahler 3-5). Water indices (NDWI) >0.3 distinguish from dry land.",
+    "SeaLake: Dark pixel reflectance in NIR (<0.02) with sun glint patterns in off-nadir views. Wave spectrum analysis possible in >5m resolution imagery."
+]
+euroSAT_des3 = [
+    "AnnualCrop: Earth's quilt stitched with threads of gold and jade, where geometric patches breathe with the rhythm of seasons, each furrow a line in nature's ledger.",
+    "Forest: A living cathedral of emerald spires, where sunlight filters through stained-glass leaves and the canopy hums with silent chlorophyll hymns.",
+    "HerbaceousVegetation: Nature's watercolor palette where green strokes blend into amber washes, a transient masterpiece rewritten with each dawn's dew.",
+    "Highway: Silver arteries pulsing with metallic corpuscles, carrying the lifeblood of civilization across the patient flesh of the landscape.",
+    "Industrial: The chessboard of progress, where steel pawns stand guard over concrete squares, exhaling plumes of ambition into the sky.",
+    "Pasture: Velvet cushions embroidered with woolen constellations, where earth and sky trade breaths through a million grass-blade lungs.",
+    "PermanentCrop: Terrestrial lace woven by patient hands, where woody threads follow ancient patterns passed down through generations of sun and soil.",
+    "Residential: A child's blocks scattered by some giant hand, each cube holding dreams behind brick and mortar, connected by ribbons of possibility.",
+    "River: A liquid serpent shedding its skin, forever redrawing its sinuous path while whispering secrets to the stones in its bed.",
+    "SeaLake: The world's mirror, sometimes polished to cobalt perfection, sometimes crumpled into a million diamond facets by the wind's restless fingers."
+]
+euroSAT_des4 = [
+    "AnnualCrop: Observe rectangular plots (50-200ha) showing cereal or row crops. Note: Parallel planting lines visible until canopy closure. Harvest stages create color variegation.",
+    "Forest: Dominated by tree cover (>5m height). Deciduous stands show mottled crowns; conifers display pyramidal forms. Understory rarely visible from above.",
+    "HerbaceousVegetation: Grasslands or shrublands (20-100cm height). Distinguish from crops by irregular boundaries and mixture of species (no row patterns).",
+    "Highway: Transportation corridors (2-8 lanes) with median strips. Key identifiers: overpasses, entrance ramps, and consistent width. Note: Check for traffic presence.",
+    "Industrial: Large warehouses (5000-50000m²) with loading docks. Look for: truck parking, storage tanks, and utility infrastructure. Roofs often corrugated metal.",
+    "Pasture: Managed grasslands for grazing. Indicators: fencing, water troughs, and animal trails. Differentiate from natural grassland by regular boundaries.",
+    "PermanentCrop: Orchards or vineyards. Identifying features: evenly spaced trees (5-10m intervals) or trellis systems. Maintain structure in dormant season.",
+    "Residential: Detached dwellings (100-400m² footprint) with driveways. Note roof shapes (gabled/hip) and lot sizes. Suburbs show curvilinear street patterns.",
+    "River: Natural watercourses. Assess width (10-500m) and meander geometry. Braided channels indicate high sediment load. Note: Look for riparian vegetation.",
+    "SeaLake: Standing water bodies. Lakes show defined shorelines; coastal waters may have sediment plumes. Wave patterns indicate wind direction/speed."
+]
+euroSAT_des5 = [
+    "AnnualCrop: A testament to humanity's seasonal pact with the land, where geometric order imposed by plows yields chromatic symphonies of growth and harvest.",
+    "Forest: The ancient manuscript of undisturbed nature, where each tree is a character in an ecological narrative written in rings and canopies.",
+    "HerbaceousVegetation: The liminal spaces where wilderness and cultivation engage in their endless dialogue, mediated by fire, grazing, and time.",
+    "Highway: Modern pilgrimage routes where the sacred has been replaced by logistics, yet still shape human movement as decisively as ancient trade paths.",
+    "Industrial: The cathedrals of our post-industrial age, where productivity is worshiped through steel and concrete, generating both wealth and entropy.",
+    "Pasture: The domesticated face of wilderness, where humanity's pastoral dreams are written in fenced polygons and the movement of grazing herds.",
+    "PermanentCrop: Living archives of agricultural knowledge, where generations of cultivation wisdom are encoded in the spacing of vines and the pruning of boughs.",
+    "Residential: The physical manifestation of social structures, where zoning laws and economic forces crystallize into patterns of dwellings and roads.",
+    "River: The original highways that shaped civilizations, now often constrained by human needs yet still dictating settlement patterns and ecosystem boundaries.",
+    "SeaLake: The eternal frontiers that have alternately divided and connected human communities, their surfaces hiding depths of ecological complexity."
+]

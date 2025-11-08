@@ -1,0 +1,45 @@
+ISIC_des1 = [
+    "Rough, scaly patches or crusts; reddish-brown coloration; often appears on sun-exposed areas; typically 1-3cm with irregular borders; may resemble dry skin that doesn't heal.",
+    "Pearly or waxy nodule with rolled edges; visible blood vessels (telangiectasia); may ulcerate and bleed; flesh-colored to pinkish-red; often dome-shaped with central depression.",
+    "Yellowish-brown plaques with greasy texture; stuck-on appearance; variable size (mm to cm); rough surface scale; often seborrheic keratosis showing 'brain-like' surface patterns.",
+    "Firm, raised nodule; characteristic dimple sign when pinched; reddish-brown coloration; central hyperkeratosis; typically <1cm; commonly appears on extremities.",
+    "Asymmetric pigmented lesion with irregular borders; color variation (brown, black, red, white); rapid growth changes; often >6mm diameter; may show ulceration or bleeding.",
+    "Uniformly pigmented macule/papule; regular borders; tan-brown coloration; smooth surface; typical moles range from 1mm-1cm; may contain hair; dome-shaped or flat morphology.",
+    "Reddish-purple vascular markings; compressible papules/nodules; ranges from cherry-red (angioma) to bluish (venous malformation); varies from pinpoint to several centimeters; may blanch under pressure."
+]
+ISIC_des2 = [
+    "Erythematous, hyperkeratotic plaques with adherent scale on actinically damaged dermis; irregular acanthosis; disordered maturation of keratinocytes; basal layer atypia with solar elastosis.",
+    "Nodular proliferation of basaloid cells with peripheral palisading; retraction artifacts at stromal interface; mucinous stroma deposition; tumor lobules showing ulceration and superficial telangiectasia.",
+    "Acanthotic epidermis with horn pseudocysts and papillomatosis; 'church spire' hyperkeratosis overlying basal melanocytosis; laminated orthokeratosis with minimal dysplasia.",
+    "Dermal fascicles of spindle cells with storiform pattern; overlying epidermal hyperplasia; hemosiderin deposition; collagen trapping at periphery with central hypergranulosis.",
+    "Radial growth phase exhibits pagetoid melanocytosis and lentiginous hyperplasia; vertical phase shows mitotic dermal nests with lymphocytic response; Breslow depth >0.8mm.",
+    "Compound nevus with nested melanocytes at dermoepidermal junction; maturation gradient with depth; symmetrical architecture; absent cytologic atypia or mitotic figures.",
+    "Dilated thin-walled vascular channels in superficial dermis; lobular proliferation of endothelial cells; GLUT1-negative staining pattern; absence of perineural invasion."
+]
+ISIC_des3 = [
+    "Sharply demarcated keratotic papules with 'sandpaper' texture on photoaged skin; coral-red base with overlying yellow scale; resembles dried candle wax on erythematous plaque.",
+    "Translucent papule with arborizing telangiectasia traversing its surface; 'rolled pearl' border enclosing central ulceration; glistening surface shows collarette of epidermis.",
+    "Verrucous plaque demonstrating 'stuck-on' morphology; 'brain gyri' surface pattern with comedo-like plugs; greasy keratin debris accumulates in fissures between epidermal ridges.",
+    "Fibrotic papule exhibiting Fitzpatrick's dimple sign upon lateral compression; targetoid appearance with peripheral brownish halo surrounding central keratotic core.",
+    "Chaotic pigment network with pseudopod extensions; 'starburst' pattern under dermoscopy; blue-white veil obscuring underlying reticular patterns at tumor periphery.",
+    "Uniform reticular melanin distribution forming symmetric 'cobblestone' architecture; comma-shaped vessels traverse smooth dome-shaped surface without structural disruption.",
+    "Rubbery compressible nodule with 'lacunar lake' appearance under diascopy; pulsatile vascular flow visible via dermatoscopy; violaceous hue suggests venous malformation origin."
+]
+ISIC_des4 = [
+    "DDx: Distinguish from hypertrophic AK by full-thickness keratinocyte atypia; differs from SCC in situ by partial-thickness dysplasia and preserved epidermal maturation.",
+    "Key diagnostic criteria: Tumor-stromal retraction, peripheral palisading, and myxoid stroma. Differentiated from trichoepithelioma by ulceration and mucin deposition.",
+    "Pathognomonic features: Pseudohorn cysts and sudden circumscription. Contrast with verruca vulgaris through absence of koilocytes and presence of melanin caps.",
+    "Diagnostic triad: Central hyperkeratosis, peripheral collagen trapping, and dimple sign. Distinguish from dermatofibrosarcoma protuberans by CD34 negativity.",
+    "ABCDE criteria fulfillment: Asymmetry, Border irregularity, Color variegation, Diameter >6mm, Evolution. Differentiated from dysplastic nevus by confluence of nests.",
+    "Hallmark features: Symmetric junctional nests with maturation. Contrasts with melanoma through absence of pagetoid spread and dermal mitoses.",
+    "Diagnostic markers: GLUT1-negative, D2-40-positive. Differentiated from pyogenic granuloma by lobular architecture and absence of inflammatory infiltrate."
+]
+ISIC_des5 = [
+    "Stage progression: UV-induced TP53 mutations → clonal expansion of atypical keratinocytes → development of 'cornoid lamella' parakeratosis → invasive squamous transformation.",
+    "Tumorigenesis pathway: PTCH1 mutations → constitutive hedgehog signaling → basaloid proliferation → stromal interaction inducing myxoid changes and telangiectasia formation.",
+    "Lesion development: Sebaceous differentiation signals → epidermal invagination → keratin pseudocyst formation → verrucous hyperplasia with melanin pigment retention.",
+    "Pathogenesis cascade: Trauma-induced fibroblast activation → TGF-β mediated collagen synthesis → histiocytic recruitment → characteristic central keratotic plug formation.",
+    "Metastatic process: Radial growth phase (confined to epidermis) → vertical growth phase (dermal invasion) → angiogenesis induction → lymphatic permeation and distant spread.",
+    "Nevogenesis: BRAF V600E mutation → melanocyte proliferation → junctional nest formation → dendritic process extension → terminal growth arrest via senescence pathways.",
+    "Vascular pathogenesis: VEGF overexpression → endothelial proliferation → vascular lumen formation → pericyte recruitment → blood flow establishment with shunt development."
+]

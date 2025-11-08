@@ -1,0 +1,60 @@
+euroSAT_des1 = [
+    "AnnualCrop appears as large, patchy agricultural fields with varying colors and textures, often rectangular and clearly divided, reflecting different crop types and growth stages.",
+    "Forest shows up as dense, continuous green areas with a textured canopy. Seasonal forests may exhibit color shifts. The regions are usually uniform and lack structured patterns.",
+    "HerbaceousVegetation displays as irregular patches of grassland or shrubland. Colors range from green to brown, with a rough, speckled texture and natural, unstructured boundaries.",
+    "Highway is marked by long, straight or curving paved roads, often grey, intersecting or running parallel. Surrounding land may show traffic zones, interchanges, or adjacent clearings.",
+    "Industrial areas are filled with large buildings, warehouses, and paved lots. Regular shapes, roof patterns, and a lack of vegetation are typical, often found near road networks.",
+    "Pasture appears as green or lightly colored open fields, sometimes divided by fences or tree lines. The layout is often natural but may show repeated use patterns from grazing animals.",
+    "PermanentCrop consists of rows or grids of trees or vines, such as orchards or vineyards. These fields have clear, repeated planting patterns, often with visible spacing between rows.",
+    "Residential zones show clustered rooftops, street grids, and yards. The density varies, and the layout often forms neighborhoods with visible roads, gardens, and occasional buildings.",
+    "River appears as a winding blue or dark ribbon through the landscape. The riverbanks are usually curved with possible tributaries or floodplains visible, often surrounded by vegetation.",
+    "SeaLake shows up as a large water body with clear edges. The water may vary in color due to depth or clarity, often surrounded by natural shoreline or adjacent land cover types."
+]
+euroSAT_des2 = [
+    "AnnualCrop fields resemble a mosaic of cultivated rectangles, their hues shifting from bright green to golden brown, arranged in orderly grids that signal intensive land management.",
+    "Forest appears as vast, contiguous green masses with textured surfaces. From above, they seem like soft moss blankets, occasionally broken by lighter gaps or sinuous paths.",
+    "HerbaceousVegetation forms irregular, loosely clustered patches with muted greens and browns. The edges are blurred, and textures appear coarse, suggesting wild, unmanaged growth.",
+    "Highway segments are narrow, elongated lines cutting through the terrain. They display high reflectance and smooth continuity, often intersecting in sharp angles or sweeping curves.",
+    "Industrial zones present as rigid clusters of gray and white rectangles. Large roofs and paved surfaces dominate, exhibiting sharp boundaries and a scarcity of vegetative signatures.",
+    "Pastureland shows as open, softly colored expanses with light textures. The areas often include subtle lines or curved marks from animal movement or rotational grazing patterns.",
+    "PermanentCrop zones are characterized by repetitive linear or grid-like arrangements, revealing orchards or vineyards. The row structure creates a rhythmic, combed appearance.",
+    "Residential areas manifest as dense clusters of small, angular rooftops interwoven with narrow roads. Patterns may be radial or grid-like, varying with urban planning styles.",
+    "River features are sinuous dark bands threading through diverse terrains. They contrast strongly with adjacent land and may branch or meander, bordered by green floodplains.",
+    "SeaLake regions form smooth, homogeneous surfaces in shades of blue or dark cyan. Their outlines are often clean and curved, sharply contrasting with textured surrounding land."
+]
+euroSAT_des3 = [
+    "AnnualCrop zones exhibit high spatial regularity with rectangular field geometry. Varying spectral reflectance indicates distinct crop stages, often forming sharp, color-divided parcels.",
+    "Forest regions appear as dark green, homogeneous patches with high NDVI values. Textural consistency and canopy closure suggest dense, mature tree coverage with minimal fragmentation.",
+    "HerbaceousVegetation is detected as low-density, heterogeneous cover with intermediate greenness and irregular boundaries, indicating natural grasslands or transitional ecological zones.",
+    "Highway features form narrow, linear elements with high reflectance in visible bands. They connect urban centers and traverse landscapes with minimal surrounding vegetative interference.",
+    "Industrial areas display structured, angular forms with high impervious surface indices. Roofs and paved lots yield strong reflectance contrasts, indicating non-agricultural human activity.",
+    "Pasture regions present smooth, semi-uniform textures with moderate NDVI. Weak edge contrast and scattered bare patches imply grazing impact and minimal infrastructural delineation.",
+    "PermanentCrop zones are characterized by periodic, row-based texture patterns. The vegetation appears consistently spaced, aligning with orchard or vineyard planting techniques.",
+    "Residential areas contain dense clusters of small reflective surfaces arranged in block or radial patterns. Road networks and spacing variations suggest suburban versus urban morphologies.",
+    "River systems appear as continuous, dark linear features with meandering paths. Their low reflectance and branching tributaries are key indicators for hydrographic structure delineation.",
+    "SeaLake bodies show large, low-texture areas with consistent low reflectance in NIR bands. Their clearly defined perimeters contrast strongly with surrounding heterogeneous land cover."
+]
+euroSAT_des4 = [
+    "AnnualCrop zones are typified by structured, orthogonal field boundaries with distinct spectral heterogeneity, reflecting crop type variability and phenological differentiation.",
+    "Forest areas exhibit high biomass density and contiguous canopy cover, often forming large homogeneous patches with stable NDVI signatures across temporal observations.",
+    "HerbaceousVegetation is observed as dispersed, non-linear vegetative cover with moderate chlorophyll reflectance, representing unmanaged grasslands or transitional ecological zones.",
+    "Highways appear as narrow, elongated anthropogenic features with high surface reflectance and strong geometric linearity, typically intersecting multiple land cover categories.",
+    "Industrial zones consist of large-scale built-up units with uniform rooftop reflectance and low vegetative indices, often located near major transportation or logistic corridors.",
+    "Pasture regions present intermediate vegetation cover with relatively low spatial regularity, commonly exhibiting signs of land use disturbance such as trampling or overgrazing.",
+    "PermanentCrop areas are characterized by repeated planting geometry, exhibiting consistent row spacing and anisotropic reflectance patterns aligned with orchard or vineyard use.",
+    "Residential zones show complex spatial configurations with dense roof patterns, moderate impervious surface fractions, and embedded transport networks forming recognizable urban layouts.",
+    "River systems manifest as curvilinear, low-reflectance features. Their morphology often includes branching networks and associated riparian vegetation with seasonal water extent variability.",
+    "SeaLake bodies are large, spectrally homogeneous water surfaces with stable outlines. They exhibit strong absorption in near-infrared bands and serve as key hydrological references."
+]
+euroSAT_des5 = [
+    "AnnualCrop: Regular-shaped plots with spectral diversity tied to crop stage. High edge contrast; patterns align with mechanized farming practices.",
+    "Forest: Large contiguous green zones with dense canopy structure. High NDVI and minimal human disturbance; consistent temporal signatures.",
+    "HerbaceousVegetation: Non-uniform patches with mid-range vegetation indices. Typically transitional zones or naturally regenerating landscapes.",
+    "Highway: Linear, high-albedo structures. Strong geometric clarity; minimal adjacent vegetation. Frequently intersect with built-up or rural zones.",
+    "Industrial: High-density artificial surfaces. Dominated by rooftops and paved areas. Low spectral vegetation index; organized grid-like patterns.",
+    "Pasture: Semi-regular, light-green fields. Moderate biomass levels; often interspersed with bare soil or grazing-induced texture patterns.",
+    "PermanentCrop: Grid-aligned vegetative arrays. Distinct periodic texture due to planting geometry; indicates perennial cultivation systems.",
+    "Residential: Dense clusters of impervious surfaces. Rooftop textures and road networks define spatial organization; variable spectral responses.",
+    "River: Meandering dark linear objects. Spectral contrast with adjacent land is high. Morphology includes branching and lateral expansion zones.",
+    "SeaLake: Flat, low-texture water bodies. Spectrally stable with strong NIR absorption. Boundaries remain consistent unless affected by seasonal shifts."
+]

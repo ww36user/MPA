@@ -1,0 +1,45 @@
+ISIC_des1 = [
+    "Actinic Keratosis often appears as rough, scaly patches on sun-exposed skin, ranging in color from red to brown. The lesions are typically flat or slightly raised with a crusty surface.",
+    "Basal Cell Carcinoma usually presents as a pearly or waxy bump, sometimes with visible blood vessels. It may bleed or form a crust and often appears on sun-exposed areas like the face or neck.",
+    "Benign Keratosis lesions appear as thick, wart-like, or waxy growths. They can be light tan, brown, or black and often have a stuck-on look with well-defined edges and a rough surface.",
+    "Dermatofibroma is a firm, raised nodule commonly found on the legs. It may be brown, red, or purple and dimples inward when pinched. The surface is usually smooth or slightly scaly.",
+    "Melanoma can vary widely in appearance but often shows as an irregular, multicolored mole with uneven borders. It may be black, brown, red, or even white and can change in size or shape.",
+    "Nevus (mole) typically appears as a small, round or oval patch of skin, usually brown or black. It has smooth borders, uniform color, and remains stable over time without significant changes.",
+    "Vascular Skin Lesions often show as bright red, purple, or bluish patches or nodules caused by blood vessel growth. They can be flat or raised and may blanch when pressed."
+]
+ISIC_des2 = [
+    "Actinic Keratosis resembles sunbaked earth—flaking, cracked, and tinged with hues of rust and ochre. These plaques cling to skin like wind-weathered lichen, hinting at chronic sun exposure.",
+    "Basal Cell Carcinoma often mimics dew-kissed pearls embedded in flesh, glistening under light, with serpentine vessels coursing like rivers beneath translucent skin, fragile yet persistent.",
+    "Benign Keratosis looks like wax melted mid-drip, frozen in time. Its stuck-on texture and blotchy palette—ranging from sandy beige to charcoal—evoke aging bark or dried resin on wood.",
+    "Dermatofibroma appears as a plum-toned pebble beneath the dermis, firm to the touch and sinking inward like a dimpled cushion. Its color shifts subtly like bruised fruit under soft light.",
+    "Melanoma unfolds like chaotic galaxies across the skin—shadowed, asymmetrical, and unpredictable in hue. Its jagged borders and chromatic rebellion betray a deeper, dangerous transformation.",
+    "Nevus sits quietly like a seal's mark—round, tame, and consistently pigmented. Its simplicity and steadiness echo a quiet permanence, unchanging like an ink drop on parchment.",
+    "Vascular Skin Lesions bloom like crushed berries beneath the skin, pulsating with reds, purples, and blues. Some glisten, others matte, and many pale momentarily when gently pressed."
+]
+ISIC_des3 = [
+    "Actinic Keratosis manifests as erythematous to hyperpigmented macules or plaques with a keratotic surface. Typically arises on chronically sun-exposed areas and may exhibit epidermal dysplasia.",
+    "Basal Cell Carcinoma is characterized by translucent nodules with telangiectasia, central ulceration, or rolled borders. Commonly localized to the head and neck, it demonstrates invasive basal cells histologically.",
+    "Benign Keratosis, such as seborrheic keratosis, presents as sharply demarcated, verrucous plaques with a waxy or 'stuck-on' appearance. Pigmentation varies from light tan to near-black.",
+    "Dermatofibroma appears as a firm dermal nodule with hyperpigmentation and a characteristic central depression upon lateral compression. Histology reveals fibroblast proliferation and collagen entrapment.",
+    "Melanoma displays asymmetry, irregular borders, variegated pigmentation, and dynamic evolution in size. It may arise de novo or from dysplastic nevi, with potential for vertical invasion and metastasis.",
+    "Nevus typically presents as a symmetric, uniformly pigmented macule or papule with smooth borders. Comprised of benign melanocytic nests, it remains morphologically stable over time.",
+    "Vascular Lesions are marked by capillary or venous dilation, presenting as erythematous to violaceous patches or nodules. These lesions may demonstrate blanching and are often congenital or acquired."
+]
+ISIC_des4 = [
+    "Actinic Keratosis presents as hyperkeratotic, erythematous lesions primarily on UV-damaged skin. Histopathology reveals atypical keratinocytes confined to the basal epidermis with parakeratosis and solar elastosis.",
+    "Basal Cell Carcinoma typically manifests as a pearly papule with central ulceration and telangiectasia. Microscopically, it shows nests of basaloid cells with peripheral palisading and clefting from surrounding stroma.",
+    "Benign Keratosis encompasses lesions such as seborrheic keratosis, which appear as verrucous, pigmented plaques. Histology reveals hyperkeratosis, acanthosis, and horn cysts without cytologic atypia.",
+    "Dermatofibroma is a benign fibrohistiocytic tumor seen as firm nodules with epidermal hyperplasia. Histologically, it displays a storiform pattern of spindle cells within the dermis and overlying basal layer hyperplasia.",
+    "Melanoma is an aggressive melanocytic neoplasm with ABCDE criteria: asymmetry, border irregularity, color variation, diameter >6mm, and evolution. Histology shows atypical melanocytes with dermal invasion and mitoses.",
+    "Nevus (melanocytic nevus) appears as a well-circumscribed, uniformly pigmented lesion. It consists of benign nests of melanocytes located in the junctional, dermal, or compound layers of the epidermis.",
+    "Vascular Skin Lesions include angiomas and hemangiomas, characterized clinically by red to violaceous macules or nodules. Histologically, they show proliferation of dilated or newly formed blood vessels."
+]
+ISIC_des5 = [
+    "Actinic Keratosis appears as poorly demarcated, scaly macules or papules on photoaged skin. In dermoscopy, one may observe a red pseudo-network, white scales, and targetoid hair follicles.",
+    "Basal Cell Carcinoma shows arborizing vessels, ovoid nests, and translucency on clinical inspection. Dermoscopic findings include leaf-like areas, spoke-wheel structures, and ulceration.",
+    "Benign Keratosis exhibits sharply bordered, 'stuck-on' plaques with milia-like cysts and comedo-like openings under dermoscopy. Lesions are often pigmented but symmetrical and stable.",
+    "Dermatofibroma presents as firm nodules with a characteristic central white scar-like area and peripheral pigmentation. The ‘dimple sign’ is often positive upon lateral compression.",
+    "Melanoma demonstrates asymmetry, multi-hued pigmentation, irregular dots/globules, and atypical network. Dermoscopic red flags include blue-white veil, streaks, and regression structures.",
+    "Nevus typically shows a symmetric pigment network, uniform globules, and regular distribution of color. Stability over time and absence of atypical structures aid in benign diagnosis.",
+    "Vascular Lesions are distinguished by their red-purple hue, blanching response, and presence of lacunae in dermoscopy. They may be flat (e.g., port-wine stain) or raised (e.g., cherry angioma)."
+]

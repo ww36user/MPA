@@ -1,0 +1,503 @@
+            Plantae_des1 = [
+    "Cocos nucifera (Coconut Tree): A tall palm tree commonly found in tropical regions, with long, arching feather-like leaves. The trunk is straight and covered in noticeable patterns. The coconut fruit has a hard outer shell, containing transparent coconut water and white coconut meat inside.",
+
+    "Dichelostemma capitatum (Blue Dicks): A perennial herb with a round, umbrella-shaped inflorescence made up of purple-blue flowers. Its long, slender stem is often found growing alongside other grasses and herbs in dry regions.",
+
+    "Iris pseudacorus (Yellow Iris): A perennial herb with sword-shaped green leaves, typically found near wetlands or lake edges. The flowers are bright yellow and have a distinctive iris shape, making them both striking and elegant.",
+
+    "Medeola virginiana (Indian Cucumber Root): A wetland perennial plant with narrow, lance-shaped leaves. Its flowers are typically greenish or yellow, blooming in summer. The plant has a stout rhizome adapted to moist environments.",
+
+    "Achillea millefolium (Yarrow): A perennial herb with feathery, finely divided leaves and clusters of small, flat-topped flowers that come in white, pink, or yellow. It is commonly found in fields, meadows, and along roadsides.",
+
+    "Ageratina altissima (White Snakeroot): A perennial herb with broad, ovate leaves and clusters of small, white flowers. It thrives in woodlands and is known for being toxic to livestock and humans.",
+
+    "Bellis perennis (English Daisy): A small perennial plant with basal rosettes of green leaves and bright, white or pink daisy-like flowers with yellow centers. It commonly grows in lawns, fields, and gardens.",
+
+    "Cirsium arvense (Creeping Thistle): A spiny, perennial herb with lobed, silvery-green leaves and purple, thistle-like flowers. It spreads rapidly by rhizomes and is often considered a weed in cultivated areas.",
+
+    "Cirsium vulgare (Spear Thistle): A tall, spiny perennial plant with large, deeply lobed leaves and purple, ball-shaped flowers. It is commonly found in disturbed habitats and is known for its sharp spines.",
+
+    "Lobelia cardinalis (Cardinal Flower): A striking perennial with tall spikes of red tubular flowers, often seen near streams or in moist, shaded areas. Its leaves are lance-shaped and it attracts hummingbirds.",
+
+    "Claytonia virginica (Virginia Springbeauty): A small perennial herb with oval, pointed leaves and delicate pink to white flowers. It is found in moist woodlands and blooms early in the spring.",
+
+    "Portulaca oleracea (Common Purslane): A low-growing, succulent annual with fleshy, reddish stems and thick, green leaves. The small, vibrant flowers bloom in shades of pink, yellow, or orange and open in the sunlight.",
+
+    "Cornus florida (Flowering Dogwood): A small deciduous tree with opposite, ovate leaves and large, showy flowers that are typically white or pink. The flowers are surrounded by bracts, and the tree produces red berries in the fall.",
+
+    "Cornus sericea (Redosier Dogwood): A deciduous shrub with bright red stems, opposite oval leaves, and small white flowers that bloom in late spring. It is often used in landscaping for its striking bark color.",
+
+    "Lonicera japonica (Japanese Honeysuckle): A fragrant, fast-growing vine with dark green, oval leaves and creamy-white to yellow tubular flowers. It is invasive in some areas and attracts pollinators like bees and hummingbirds.",
+
+    "Kalmia latifolia (Mountain Laurel): A dense, evergreen shrub with glossy, dark green leaves and large clusters of pink to white flowers. It typically grows in acidic soils and is found in woodlands and mountainous regions.",
+
+    "Anagallis arvensis (Scarlet Pimpernel): A small, trailing plant with bright red, orange, or blue flowers and narrow, opposite leaves. It often grows in dry, disturbed soils and is known for its tendency to close its flowers in bad weather.",
+
+    "Lupinus texensis (Texas Bluebonnet): A striking perennial legume with palmate leaves and dense spikes of blue flowers. It is the state flower of Texas and typically blooms in the spring, covering fields with blue hues.",
+
+    "Fagus grandifolia (American Beech): A large, deciduous tree with smooth, gray bark and oval leaves that turn golden yellow in the fall. It has a distinctive, wide canopy and is found in hardwood forests.",
+
+    "Quercus alba (White Oak): A large, long-lived tree with deeply lobed leaves that turn red or purple in fall. Its bark is light gray and scaly, and it produces acorns that are a food source for wildlife.",
+
+    "Asclepias asperula (Spider Milkweed): A perennial herb with narrow, lance-shaped leaves and clusters of star-shaped greenish-purple flowers. It is a favorite of pollinators like bees and butterflies.",
+
+    "Asclepias incarnata (Swamp Milkweed): A perennial plant with broad, lance-shaped leaves and pink to purple clustered flowers. It thrives in wetland areas and is an important nectar source for butterflies.",
+
+    "Galium aparine (Cleavers): A creeping, herbaceous plant with whorled leaves and small, star-like flowers. Its sticky stems cling to other plants and animals, allowing it to spread easily in disturbed habitats.",
+
+    "Campsis radicans (Trumpet Vine): A vigorous, deciduous vine with large, trumpet-shaped orange to red flowers and pinnate leaves. It attracts hummingbirds and is often used as an ornamental climber.",
+
+    "Glechoma hederacea (Ground Ivy): A low-growing, evergreen perennial with round, scalloped leaves and small, purplish-blue flowers. It is often found in shady, moist areas and spreads rapidly in lawns and gardens.",
+
+    "Fraxinus americana (White Ash): A large deciduous tree with opposite, compound leaves that turn yellow or purple in fall. The bark is grayish with a diamond-shaped pattern, and the tree produces samaras in late summer.",
+
+    "Mimulus aurantiacus (Sticky Monkey Flower): A woody shrub with sticky, glandular leaves and tubular orange to yellow flowers. It is often found in coastal regions and attracts pollinators like bees and hummingbirds.",
+
+    "Plantago lanceolata (Ribwort Plantain): A common herb with long, narrow leaves arranged in a rosette, and tall flower spikes with small, greenish-brown flowers. It is often found in meadows, fields, and lawns.",
+
+    "Verbascum thapsus (Great Mullein): A biennial plant with woolly, gray-green leaves and tall spikes of yellow, funnel-shaped flowers. It is often found in disturbed soils and can reach heights of 6 feet.",
+
+    "Callicarpa americana (American Beautyberry): A deciduous shrub with arching branches, oval leaves, and clusters of small, purple berries that surround the stems. It is commonly found in woodland areas and provides food for wildlife.",
+
+    "Sassafras albidum (Sassafras): A medium-sized deciduous tree with unique, mitten-shaped leaves and fragrant, aromatic bark. The tree produces small yellow-green flowers and blue-black fruit in the fall.",
+
+    "Oxalis pes-caprae (Bermuda Buttercup): A low-growing perennial with clover-like leaves and yellow, funnel-shaped flowers. It is often found in disturbed soils and can become invasive in warm climates.",
+
+    "Platanus occidentalis (American Sycamore): A large deciduous tree with distinctive, mottled bark and broad, palmate leaves. The tree produces round, spiky seed balls and is often found in riverine habitats.",
+
+    "Berberis thunbergii (Japanese Barberry): A deciduous shrub with spiny stems, small, oval leaves, and clusters of yellow flowers followed by red berries. It is often used in landscaping but is considered invasive in some regions.",
+
+    "Sanguinaria canadensis (Bloodroot): A perennial herb with a single, large, lobed leaf and white, multi-petaled flowers. The plant produces a red sap, which gives it its name, and is typically found in woodland habitats.",
+
+    "Aquilegia formosa (Columbine): A perennial with unique, spurred flowers in shades of red and yellow. It has deeply lobed, bluish-green leaves and is commonly found in woodlands and mountainous areas.",
+
+    "Fragaria vesca (Wild Strawberry): A low-growing plant with trifoliate leaves and small, white flowers that give way to sweet red strawberries. It is often found in woodland edges and grassy meadows.",
+
+    "Potentilla indica (Indian Strawberry): A ground-covering perennial with trifoliate leaves and small, yellow flowers. It produces small, red berries that resemble strawberries, though they are not true strawberries.",
+
+    "Rubus ursinus (California Blackberry): A sprawling, thorny shrub with compound, ovate leaves and white to pink flowers that produce blackberries. It is commonly found in hedgerows and along stream banks.",
+
+    "Rhus typhina (Staghorn Sumac): A deciduous shrub or small tree with large, pinnately compound leaves and clusters of red, fuzzy fruit. The plant is often found in disturbed areas and provides habitat for wildlife.",
+
+    "Acer saccharum (Sugar Maple): A large tree with opposite, palmate leaves that turn brilliant shades of red and orange in the fall. The tree produces small winged seeds known as samaras and is the source of maple syrup.",
+
+    "Hamamelis virginiana (Witch Hazel): A deciduous shrub with broad, elliptical leaves and yellow, spidery flowers that bloom in late fall or early winter. It is often found in woodlands and has medicinal properties.",
+
+    "Solanum dulcamara (Bittersweet Nightshade): A climbing perennial vine with green, ovate leaves and clusters of small purple flowers followed by red berries. It is often found in wetland areas and is toxic to humans and animals.",
+
+    "Thuja occidentalis (Eastern Arborvitae): An evergreen tree with narrow, scale-like leaves and a conical shape. The tree produces small, round cones and is commonly used in landscaping as a hedge or privacy screen.",
+
+    "Abies balsamea (Balsam Fir): A tall evergreen tree with flat, needle-like leaves and cylindrical cones. The tree has a strong, pleasant fragrance and is often used as a Christmas tree or for timber.",
+
+    "Osmunda regalis (Royal Fern): A large, deciduous fern with broad, feathery fronds. It grows in moist, shaded areas and is often found in wetlands or along stream banks.",
+
+    "Polystichum acrostichoides (Christmas Fern): An evergreen fern with leathery, lance-shaped fronds. It is commonly found in wooded areas and is named for its Christmas-time appearance due to its evergreen nature.",
+
+    "Polystichum munitum (Western Sword Fern): A large, evergreen fern with sword-shaped fronds that are dark green and glossy. It is commonly found in shaded, moist forests on the west coast.",
+
+    "Onoclea sensibilis (Sensitive Fern): A perennial fern with broad, delicate fronds that turn yellow or brown in the fall. It prefers wet, boggy areas and is sensitive to frost, hence its name.",
+
+    "Adiantum pedatum (Maidenhair Fern): A delicate fern with fan-shaped fronds and black, wiry stems. It grows in moist, shaded environments and is known for its graceful, attractive appearance."
+]
+            Plantae_des2 = [
+    "Cocos nucifera (Coconut Palm): A tall tree found in tropical climates, with long, graceful leaves that fan out like feathers. The trunk is erect, covered in textured patterns. The coconut has a tough outer shell, containing clear coconut water and creamy flesh inside.",
+
+    "Dichelostemma capitatum (Blue Dicks): A perennial herb with an umbrella-like flower cluster consisting of purple-blue blooms. Its slender stems typically grow alongside other grasses and wildflowers in arid environments.",
+
+    "Iris pseudacorus (Yellow Iris): A perennial aquatic plant with sharp, sword-shaped leaves, often found in wetlands or lake margins. Its golden-yellow flowers have a distinctive shape, making it both bold and beautiful.",
+
+    "Medeola virginiana (Indian Cucumber Root): A plant that thrives in wetlands, featuring narrow, lance-shaped leaves. Its flowers are generally greenish or yellow, blooming during the summer months. It has a thick rhizome adapted for moist habitats.",
+
+    "Achillea millefolium (Yarrow): A hardy perennial herb with finely dissected leaves and flat clusters of tiny flowers, which can be white, pink, or yellow. It typically grows in meadows, fields, or along roadsides.",
+
+    "Ageratina altissima (White Snakeroot): A perennial herb with wide, ovate leaves and clusters of small, white blossoms. It grows in woodlands and is toxic to livestock and humans when consumed.",
+
+    "Bellis perennis (English Daisy): A low-growing perennial with rosettes of green leaves and vibrant white or pink flowers that resemble traditional daisies, often seen in lawns and gardens.",
+
+    "Cirsium arvense (Creeping Thistle): A thorny perennial herb with lobed, silvery-green leaves and purple, spiny flowers. It spreads quickly through rhizomes and is often seen as a weed in cultivated fields.",
+
+    "Cirsium vulgare (Spear Thistle): A tall, spiky perennial with large, deeply indented leaves and purple, globe-shaped flowers. It thrives in disturbed areas and is known for its sharp spines.",
+
+    "Lobelia cardinalis (Cardinal Flower): A vibrant perennial plant with towering spikes of red tubular blooms, often found along streams or in moist, shaded habitats. It attracts hummingbirds due to its bright coloration.",
+
+    "Claytonia virginica (Virginia Springbeauty): A diminutive perennial herb with oval, pointed leaves and soft pink or white flowers. It blooms early in spring and is found in moist woodland areas.",
+
+    "Portulaca oleracea (Common Purslane): A succulent, sprawling annual plant with fleshy, reddish stems and thick, green leaves. The small, colorful flowers range from pink to yellow or orange and open in the daylight.",
+
+    "Cornus florida (Flowering Dogwood): A small deciduous tree with paired, ovate leaves and large, showy blooms that are either white or pink. The flowers are surrounded by bracts, and the tree bears red berries in autumn.",
+
+    "Cornus sericea (Redosier Dogwood): A deciduous shrub with vivid red stems, paired ovate leaves, and small white flowers that bloom in late spring. It is often planted in gardens for its striking bark.",
+
+    "Lonicera japonica (Japanese Honeysuckle): A vigorous, fragrant vine with dark green, ovate leaves and tubular flowers that transition from white to yellow. It is fast-growing and attracts various pollinators, including bees and hummingbirds.",
+
+    "Kalmia latifolia (Mountain Laurel): An evergreen shrub with glossy, dark green leaves and large clusters of pink or white blooms. It thrives in acidic soils and is commonly found in woodlands and mountainous regions.",
+
+    "Anagallis arvensis (Scarlet Pimpernel): A tiny trailing plant with vibrant red, orange, or blue flowers and narrow, opposite leaves. It typically grows in dry, disturbed areas and is known for its ability to close flowers during bad weather.",
+
+    "Lupinus texensis (Texas Bluebonnet): A striking leguminous perennial with palmate leaves and dense, upright flower spikes of blue. It is the state flower of Texas, blooming in the spring and covering fields with a brilliant blue color.",
+
+    "Fagus grandifolia (American Beech): A majestic, deciduous tree with smooth, gray bark and oval leaves that turn golden yellow in fall. Its wide canopy is a common feature in hardwood forests.",
+
+    "Quercus alba (White Oak): A large, long-lived tree with lobed leaves that change to red or purple in autumn. The bark is light gray and scaly, and the tree produces acorns that serve as food for many species of wildlife.",
+
+    "Asclepias asperula (Spider Milkweed): A perennial herb with slender, lance-shaped leaves and star-shaped greenish-purple flowers. It is a preferred nectar source for pollinators like bees and butterflies.",
+
+    "Asclepias incarnata (Swamp Milkweed): A wetland perennial with broad, lance-shaped leaves and clusters of pink to purple flowers. It thrives in moist environments and attracts butterflies for nectar.",
+
+    "Galium aparine (Cleavers): A creeping herb with whorled leaves and small, star-like flowers. Its sticky stems attach to other plants or animals, facilitating its spread in disturbed habitats.",
+
+    "Campsis radicans (Trumpet Vine): A vigorous, deciduous vine with large, trumpet-shaped orange to red blooms and pinnate leaves. It attracts hummingbirds and is often used as a climber in landscaping.",
+
+    "Glechoma hederacea (Ground Ivy): A low-growing, evergreen perennial with round, scalloped leaves and small, purplish-blue flowers. It spreads quickly in shaded, moist areas and is often found in gardens and lawns.",
+
+    "Fraxinus americana (White Ash): A large deciduous tree with opposite, compound leaves that turn yellow or purple in fall. The bark is grayish with a diamond pattern, and the tree produces winged seeds known as samaras.",
+
+    "Mimulus aurantiacus (Sticky Monkey Flower): A shrub with sticky, glandular leaves and tubular orange to yellow flowers. Found in coastal regions, it is a favorite of hummingbirds and other pollinators.",
+
+    "Plantago lanceolata (Ribwort Plantain): A common herb with narrow, lance-shaped leaves arranged in a rosette, and tall flower spikes with small, brownish-green flowers. It thrives in meadows and fields.",
+
+    "Verbascum thapsus (Great Mullein): A biennial plant with woolly, gray-green leaves and tall spikes of yellow, funnel-shaped flowers. It grows in disturbed soils and can reach up to 6 feet in height.",
+
+    "Callicarpa americana (American Beautyberry): A deciduous shrub with arching branches, oval leaves, and clusters of small, purple berries along the stems. It is found in woodland areas and provides food for wildlife.",
+
+    "Sassafras albidum (Sassafras): A medium-sized deciduous tree with fragrant, aromatic bark and unique, mitten-shaped leaves. It produces small yellow-green flowers and blue-black fruit in the fall.",
+
+    "Oxalis pes-caprae (Bermuda Buttercup): A low-growing perennial with clover-like leaves and yellow, funnel-shaped flowers. It is often seen in disturbed soils and can be invasive in warm climates.",
+
+    "Platanus occidentalis (American Sycamore): A large deciduous tree with distinctive, mottled bark and broad, palmate leaves. It produces round seed balls and is commonly found in riparian habitats.",
+
+    "Berberis thunbergii (Japanese Barberry): A spiny deciduous shrub with small, oval leaves and clusters of yellow flowers, followed by red berries. It is often planted in gardens but is invasive in certain areas.",
+
+    "Sanguinaria canadensis (Bloodroot): A perennial herb with a single, large, lobed leaf and white, multi-petaled flowers. The plant exudes red sap, hence its name, and typically grows in woodland settings.",
+
+    "Aquilegia formosa (Columbine): A perennial with unique, spurred flowers in shades of red and yellow. Its bluish-green, deeply lobed leaves complement its vibrant blooms, often found in mountainous or woodland habitats.",
+
+    "Fragaria vesca (Wild Strawberry): A low-growing plant with trifoliate leaves and small, white flowers, which give way to sweet, red strawberries. It grows in woodland edges and grassy meadows.",
+
+    "Potentilla indica (Indian Strawberry): A ground-covering perennial with trifoliate leaves and small yellow flowers. It produces small, red berries that resemble strawberries but are not true strawberries.",
+
+    "Rubus ursinus (California Blackberry): A spreading, thorny shrub with compound, ovate leaves and white to pink flowers that bloom into blackberries. It is found along stream banks and hedgerows.",
+
+    "Rhus typhina (Staghorn Sumac): A deciduous shrub or small tree with large, pinnately compound leaves and clusters of red, fuzzy fruit. It is often found in disturbed areas and provides shelter for wildlife.",
+
+    "Acer saccharum (Sugar Maple): A large tree with opposite, palmate leaves that turn vibrant red and orange in fall. The tree produces winged seeds, known as samaras, and is the primary source of maple syrup.",
+
+    "Hamamelis virginiana (Witch Hazel): A deciduous shrub with broad, elliptical leaves and yellow, spidery flowers that bloom in late fall or early winter. It is commonly found in woodlands and is known for its medicinal properties.",
+
+    "Solanum dulcamara (Bittersweet Nightshade): A climbing perennial vine with ovate, green leaves and clusters of small purple flowers, followed by red berries. It is commonly found in wetland areas and is toxic to humans and animals.",
+
+    "Thuja occidentalis (Eastern Arborvitae): An evergreen tree with narrow, scale-like leaves and a conical shape. It produces small, round cones and is often used in landscaping as a hedge or privacy screen.",
+
+    "Abies balsamea (Balsam Fir): A tall evergreen tree with flat, needle-like leaves and cylindrical cones. The tree has a pleasant fragrance and is often used as a Christmas tree or for timber.",
+
+    "Osmunda regalis (Royal Fern): A large, deciduous fern with broad, feathery fronds. It grows in moist, shaded areas and is typically found in wetlands or along stream banks.",
+
+    "Polystichum acrostichoides (Christmas Fern): An evergreen fern with leathery, lance-shaped fronds. It is commonly found in wooded areas and is named for its Christmas-time appearance due to its evergreen nature.",
+
+    "Polystichum munitum (Western Sword Fern): A large, evergreen fern with sword-shaped fronds that are dark green and glossy. It is often found in shaded, moist forests on the west coast.",
+
+    "Onoclea sensibilis (Sensitive Fern): A perennial fern with broad, delicate fronds that turn yellow or brown in fall. It prefers wet, boggy areas and is sensitive to frost, hence its name.",
+
+    "Adiantum pedatum (Maidenhair Fern): A delicate fern with fan-shaped fronds and black, wiry stems. It thrives in moist, shaded environments and is known for its graceful, attractive appearance."
+]
+            Plantae_des3 = ["Cocos nucifera (Coconut Tree): A towering tree native to tropical regions, characterized by its long, feathery leaves. The trunk is smooth and upright, and the coconut contains both clear water and creamy flesh beneath a thick, protective shell.",
+
+    "Dichelostemma capitatum (Blue Dicks): A perennial herb with slender stems that produce dense clusters of purple-blue flowers, growing in arid habitats alongside other grasses and wildflowers.",
+
+    "Iris pseudacorus (Yellow Flag Iris): An aquatic perennial plant with lance-shaped foliage, commonly found in wetland areas. Its bright yellow blooms have a distinct shape, offering a striking contrast against the surrounding greenery.",
+
+    "Medeola virginiana (Indian Cucumber Root): A perennial herb that thrives in moist soils, featuring elongated leaves and small, greenish-yellow flowers. The plant has a thick root system used for survival in wet habitats.",
+
+    "Achillea millefolium (Common Yarrow): A durable herb with finely divided leaves and clusters of small flowers in shades of white, pink, or yellow. It is commonly found in open meadows and roadsides.",
+
+    "Ageratina altissima (White Snakeroot): A perennial herb that grows in woodland environments, featuring broad, ovate leaves and clusters of small white flowers. It is toxic to livestock when ingested.",
+
+    "Bellis perennis (Common Daisy): A low-growing, perennial herb with green rosettes of leaves and vibrant flowers, typically white or pink, commonly seen in lawns or gardens.",
+
+    "Cirsium arvense (Field Thistle): A prickly herbaceous plant with deeply lobed, silvery-green leaves and purple spiny flowers. It spreads through rhizomes and is often considered a troublesome weed in cultivated fields.",
+
+    "Cirsium vulgare (Bristly Thistle): A tall perennial with sharp, spiny leaves and spherical purple flowers. It thrives in disturbed habitats and is known for its thorns and rapid growth.",
+
+    "Lobelia cardinalis (Cardinal Flower): A striking perennial known for its tall, red flower spikes, which attract hummingbirds. It flourishes in moist, shaded areas such as streamsides or wet woodlands.",
+
+    "Claytonia virginica (Virginia Springbeauty): A small, perennial plant with narrow, pointed leaves and pink or white flowers that bloom in the early spring. It is typically found in moist woodland environments.",
+
+    "Portulaca oleracea (Purslane): A succulent, spreading annual plant with fleshy, red-stemmed branches and thick, green leaves. Its small, colorful flowers bloom in the daylight, ranging from pink to yellow or orange.",
+
+    "Cornus florida (Flowering Dogwood): A small deciduous tree with broad, ovate leaves and large, showy flowers that bloom in shades of white or pink. The tree produces red berries in the fall.",
+
+    "Cornus sericea (Red Twig Dogwood): A deciduous shrub with vibrant red stems, paired oval leaves, and small white flowers that appear in late spring. It is valued for its ornamental bark.",
+
+    "Lonicera japonica (Japanese Honeysuckle): A fast-growing, fragrant vine with dark green leaves and tubular flowers that change from white to yellow. It attracts pollinators such as bees and hummingbirds.",
+
+    "Kalmia latifolia (Mountain Laurel): A shrub with dark green, glossy leaves and large, pink or white clusters of flowers. It grows in acidic soils and is common in mountainous regions.",
+
+    "Anagallis arvensis (Scarlet Pimpernel): A low-growing herb with trailing stems and brightly colored flowers, usually red or orange. It thrives in dry, disturbed habitats and closes its blooms during bad weather.",
+
+    "Lupinus texensis (Texas Bluebonnet): A perennial with palmate leaves and a dense spike of blue flowers. It is widely celebrated as the state flower of Texas, covering fields in the springtime.",
+
+    "Fagus grandifolia (American Beech): A large, deciduous tree with smooth, gray bark and oval leaves that turn golden in the fall. It grows in hardwood forests and provides habitat for wildlife.",
+
+    "Quercus alba (White Oak): A towering tree with deeply lobed leaves that turn red or purple in the fall. Its bark is light gray and scaly, and it produces acorns that provide food for various animals.",
+
+    "Asclepias asperula (Spider Milkweed): A perennial herb with slender leaves and clusters of greenish-purple star-shaped flowers. It is a valuable nectar source for pollinators like bees and butterflies.",
+
+    "Asclepias incarnata (Swamp Milkweed): A wetland perennial with broad leaves and clusters of pink to purple flowers. It thrives in damp environments and is popular with butterflies for its nectar.",
+
+    "Galium aparine (Cleavers): A creeping herb with whorled leaves and small, star-shaped flowers. Its sticky stems allow it to cling to other plants and animals, helping it to spread across disturbed areas.",
+
+    "Campsis radicans (Trumpet Creeper): A fast-growing vine with large, trumpet-shaped flowers in shades of orange or red. It is commonly found in gardens and attracts hummingbirds.",
+
+    "Glechoma hederacea (Ground Ivy): A creeping, evergreen perennial with round, scalloped leaves and small, purple-blue flowers. It thrives in shaded areas and often becomes invasive in lawns and gardens.",
+
+    "Fraxinus americana (White Ash): A large tree with opposite, compound leaves that turn yellow in the fall. Its bark is gray with a distinctive pattern, and it produces winged seeds called samaras.",
+
+    "Mimulus aurantiacus (Sticky Monkey Flower): A shrub with sticky leaves and vibrant orange or yellow tubular flowers. It thrives in coastal regions and is an important nectar source for pollinators.",
+
+    "Plantago lanceolata (Ribwort Plantain): A herb with narrow, lance-shaped leaves and tall flower spikes. It is commonly found in meadows, fields, and disturbed habitats.",
+
+    "Verbascum thapsus (Great Mullein): A biennial plant with woolly, gray-green leaves and tall spikes of yellow, funnel-shaped flowers. It grows in disturbed areas and can reach up to 6 feet in height.",
+
+    "Callicarpa americana (American Beautyberry): A deciduous shrub with arching branches and clusters of small, purple berries along its stems. It is often found in woodland areas and is a favorite among wildlife.",
+
+    "Sassafras albidum (Sassafras): A medium-sized tree with aromatic bark and unique, mitten-shaped leaves. It produces small, yellow-green flowers and dark blue fruit in the fall.",
+
+    "Oxalis pes-caprae (Bermuda Buttercup): A low-growing perennial with clover-like leaves and yellow, funnel-shaped flowers. It is commonly found in disturbed habitats and can be invasive in warmer climates.",
+
+    "Platanus occidentalis (American Sycamore): A large tree with distinctive, patchy bark and broad, palmate leaves. It produces round seed balls and is often found near rivers or streams.",
+
+    "Berberis thunbergii (Japanese Barberry): A deciduous shrub with spiny branches, small leaves, and bright yellow flowers, followed by red berries. It is often used in gardens but is invasive in some regions.",
+
+    "Sanguinaria canadensis (Bloodroot): A perennial with a single, large, lobed leaf and white, multi-petaled flowers. The plant exudes red sap, which gives it its name, and is found in woodland environments.",
+
+    "Aquilegia formosa (Columbine): A perennial plant with spurred flowers in shades of red and yellow. It has bluish-green, deeply lobed leaves and is found in mountain and woodland habitats.",
+
+    "Fragaria vesca (Wild Strawberry): A low-growing herb with trifoliate leaves and small, white flowers that turn into sweet, red berries. It thrives in woodlands and meadows.",
+
+    "Potentilla indica (Indian Strawberry): A creeping perennial with trifoliate leaves and small yellow flowers. It produces red berries that resemble strawberries but are not true strawberries.",
+
+    "Rubus ursinus (California Blackberry): A spreading shrub with compound leaves and white to pink flowers that develop into blackberries. It is often found along stream banks or in hedgerows.",
+
+    "Rhus typhina (Staghorn Sumac): A deciduous shrub with large, compound leaves and clusters of red, fuzzy fruit. It grows in disturbed habitats and provides shelter and food for wildlife.",
+
+    "Acer saccharum (Sugar Maple): A large, long-living tree with palmate leaves that turn vibrant red and orange in autumn. It produces samaras, which are winged seeds, and is the primary source of maple syrup.",
+
+    "Hamamelis virginiana (Witch Hazel): A shrub with elliptical leaves and yellow, spidery flowers that bloom in the late fall or early winter. It is often found in woodlands and is known for its medicinal uses.",
+
+    "Solanum dulcamara (Bittersweet Nightshade): A perennial vine with green leaves and purple flowers, followed by red berries. It is often found in wetlands and is toxic to both humans and animals.",
+
+    "Thuja occidentalis (Eastern Arborvitae): An evergreen tree with scale-like leaves arranged in a conical shape. It produces small, round cones and is commonly used as a hedge or privacy screen.",
+
+    "Abies balsamea (Balsam Fir): A tall evergreen tree with flat, needle-like leaves and cylindrical cones. It is often used as a Christmas tree due to its fragrant smell and symmetrical form.",
+
+    "Osmunda regalis (Royal Fern): A large, deciduous fern with broad, feathery fronds. It is found in moist, shaded environments, especially in wetlands or along stream banks.",
+
+    "Polystichum acrostichoides (Christmas Fern): A hardy evergreen fern with leathery, lance-shaped fronds. It is commonly found in wooded areas and is so named for its ability to remain green throughout winter.",
+
+    "Polystichum munitum (Western Sword Fern): A robust, evergreen fern with long, sword-shaped fronds. It thrives in shaded, moist forests and is commonly found on the west coast.",
+
+    "Onoclea sensibilis (Sensitive Fern): A perennial fern with delicate, broad fronds that turn yellow or brown in the fall. It is sensitive to frost and thrives in wet, boggy areas.",
+
+    "Adiantum pedatum (Maidenhair Fern): A delicate fern with fan-shaped fronds and dark, wiry stems. It thrives in moist, shaded areas and is prized for its graceful and attractive appearance."]
+            Plantae_des4 = [
+    "Cocos nucifera (Coconut Palm): A tall, tropical tree distinguished by its long, feathery fronds. The smooth, erect trunk supports a large coconut fruit with both liquid and fleshy interior, encased in a tough shell.",
+
+    "Dichelostemma capitatum (Blue Dicks): A perennial plant with slender stalks and a dense cluster of violet-blue blossoms, typically found in dry grasslands and wildflower meadows.",
+
+    "Iris pseudacorus (Yellow Flag Iris): An aquatic perennial species with lance-shaped leaves, often seen in wetlands. It displays large, yellow flowers that stand out against the green foliage.",
+
+    "Medeola virginiana (Indian Cucumber Root): A perennial herb thriving in moist, shaded soils, characterized by its elongated foliage and small, greenish-yellow blooms. The plant has a fleshy root system used to survive in wetlands.",
+
+    "Achillea millefolium (Common Yarrow): A hardy herb with finely cut leaves and clusters of small, white, pink, or yellow flowers. It is commonly found in meadows, fields, and roadsides.",
+
+    "Ageratina altissima (White Snakeroot): A perennial herb with broad leaves and dense clusters of small white flowers, thriving in woodland environments. It is toxic to livestock if consumed.",
+
+    "Bellis perennis (Common Daisy): A perennial plant with green rosettes of leaves and vibrant white or pink flowers, frequently found in lawns, gardens, and grassy fields.",
+
+    "Cirsium arvense (Field Thistle): A prickly, herbaceous plant with deeply lobed, silvery-green leaves and spiny purple flowers. Known for its tendency to spread rapidly through rhizomes, it can become a troublesome weed.",
+
+    "Cirsium vulgare (Bristly Thistle): A tall, spiny perennial with jagged, dark green leaves and round purple flowers. It grows quickly and is often found in disturbed habitats.",
+
+    "Lobelia cardinalis (Cardinal Flower): A striking perennial plant with tall, red flower spikes, attracting hummingbirds. It is commonly found in moist, shaded environments such as stream banks.",
+
+    "Claytonia virginica (Virginia Springbeauty): A small perennial plant with narrow, lance-shaped leaves and pink or white flowers. It is typically found in woodland areas during the early spring.",
+
+    "Portulaca oleracea (Purslane): A spreading succulent plant with fleshy stems and thick, rounded leaves. Its small, vibrant flowers, in colors ranging from yellow to pink, bloom in daylight hours.",
+
+    "Cornus florida (Flowering Dogwood): A small tree with broad, ovate leaves and large, showy blooms, typically white or pink. It produces red berries in fall, providing food for birds.",
+
+    "Cornus sericea (Red Twig Dogwood): A deciduous shrub with striking red stems, oval leaves, and white flower clusters. It adds ornamental value to landscapes and thrives in moist soils.",
+
+    "Lonicera japonica (Japanese Honeysuckle): A fast-growing vine with glossy green leaves and tubular, fragrant flowers that shift from white to yellow. It attracts a variety of pollinators.",
+
+    "Kalmia latifolia (Mountain Laurel): A shrub with dark, glossy leaves and pink or white flower clusters. It grows in acidic soils and is typically found in mountainous, woodland areas.",
+
+    "Anagallis arvensis (Scarlet Pimpernel): A low-growing, trailing herb with bright red or orange flowers. It thrives in dry, disturbed habitats and closes its flowers in response to bad weather.",
+
+    "Lupinus texensis (Texas Bluebonnet): A perennial with palmate leaves and tall, dense spikes of blue flowers. It is widely associated with Texas, where it blooms in the spring, covering fields with color.",
+
+    "Fagus grandifolia (American Beech): A large tree with smooth, gray bark and oval leaves that turn golden in autumn. It is found in hardwood forests and serves as important wildlife habitat.",
+
+    "Quercus alba (White Oak): A large tree with deeply lobed leaves that turn red or purple in the fall. Its pale, scaly bark and acorns are essential food sources for wildlife.",
+
+    "Asclepias asperula (Spider Milkweed): A perennial with slender leaves and clusters of greenish-purple star-like flowers. It is a crucial nectar source for pollinators like butterflies and bees.",
+
+    "Asclepias incarnata (Swamp Milkweed): A perennial herb with broad, ovate leaves and pink to purple flowers in dense clusters. It thrives in damp environments and attracts butterflies.",
+
+    "Galium aparine (Cleavers): A creeping herb with sticky, whorled leaves and small, star-shaped flowers. Its ability to attach to other plants and animals helps it spread easily across disturbed areas.",
+
+    "Campsis radicans (Trumpet Creeper): A vigorous, climbing vine with large, trumpet-shaped flowers in hues of orange or red. It thrives in gardens and attracts hummingbirds with its nectar.",
+
+    "Glechoma hederacea (Ground Ivy): A creeping perennial with round, scalloped leaves and small, purple-blue flowers. It grows well in shaded areas and often spreads rapidly in lawns and gardens.",
+
+    "Fraxinus americana (White Ash): A large tree with compound leaves that turn yellow in fall. It has distinctive gray bark with a unique pattern and produces winged seeds called samaras.",
+
+    "Mimulus aurantiacus (Sticky Monkey Flower): A shrub with sticky, fragrant leaves and vibrant orange to yellow tubular flowers. It is commonly found in coastal regions and is a valuable nectar plant for pollinators.",
+
+    "Plantago lanceolata (Ribwort Plantain): A perennial herb with long, narrow leaves and tall flower spikes. It is typically found in fields, meadows, and disturbed soils.",
+
+    "Verbascum thapsus (Great Mullein): A biennial plant with velvety, gray-green leaves and tall spikes of yellow, funnel-shaped flowers. It can grow up to 6 feet tall and thrives in disturbed habitats.",
+
+    "Callicarpa americana (American Beautyberry): A deciduous shrub with arching branches and clusters of small purple berries along its stems. It is commonly found in woodland environments and serves as a food source for birds.",
+
+    "Sassafras albidum (Sassafras): A medium-sized tree with aromatic bark and distinctive, mitten-shaped leaves. It produces yellow-green flowers and dark blue fruit in the fall.",
+
+    "Oxalis pes-caprae (Bermuda Buttercup): A low-growing perennial with clover-like leaves and yellow, funnel-shaped flowers. It often becomes invasive in warm climates, growing in disturbed areas.",
+
+    "Platanus occidentalis (American Sycamore): A large tree with patchy, exfoliating bark and broad, palmate leaves. It is commonly found near rivers and produces spherical seed balls.",
+
+    "Berberis thunbergii (Japanese Barberry): A deciduous shrub with spiny branches, small yellow flowers, and red berries. It is often used as an ornamental plant but can be invasive in certain regions.",
+
+    "Sanguinaria canadensis (Bloodroot): A perennial with a single large leaf and white, multi-petaled flowers. Its name comes from the red sap the plant exudes, and it is found in shaded woodlands.",
+
+    "Aquilegia formosa (Columbine): A perennial plant with spurred flowers in shades of red and yellow. It has bluish-green, deeply lobed leaves and grows in mountain and woodland areas.",
+
+    "Fragaria vesca (Wild Strawberry): A low-growing herb with trifoliate leaves and small white flowers that produce sweet red berries. It is typically found in woodland meadows.",
+
+    "Potentilla indica (Indian Strawberry): A creeping perennial with trifoliate leaves and yellow flowers. It produces small red berries resembling strawberries but is not a true strawberry plant.",
+
+    "Rubus ursinus (California Blackberry): A spreading shrub with compound leaves and white to pink flowers that develop into blackberries. It is often found along riverbanks or in hedgerows.",
+
+    "Rhus typhina (Staghorn Sumac): A deciduous shrub with large, compound leaves and clusters of fuzzy red fruit. It grows in disturbed areas and provides shelter and food for various wildlife.",
+
+    "Acer saccharum (Sugar Maple): A large tree with palmate leaves that turn brilliant red or orange in autumn. It produces winged seeds, and its sap is the source of maple syrup.",
+
+    "Hamamelis virginiana (Witch Hazel): A shrub with elliptical leaves and spidery yellow flowers that bloom in late fall or early winter. It is often found in woodlands and has various medicinal uses.",
+
+    "Solanum dulcamara (Bittersweet Nightshade): A perennial vine with green leaves and purple flowers, followed by red berries. It is toxic to both humans and animals and is found in wetlands.",
+
+    "Thuja occidentalis (Eastern Arborvitae): An evergreen tree with scale-like leaves and a conical form. It produces small, round cones and is commonly used as a privacy hedge or ornamental tree.",
+
+    "Abies balsamea (Balsam Fir): A tall evergreen tree with needle-like leaves and cylindrical cones. Its fragrant needles and symmetrical shape make it a popular Christmas tree choice.",
+
+    "Osmunda regalis (Royal Fern): A large, deciduous fern with broad, feathery fronds. It is commonly found in moist, shaded environments such as wetlands or along stream banks.",
+
+    "Polystichum acrostichoides (Christmas Fern): A hardy evergreen fern with lance-shaped, leathery fronds. It is often found in forests and is named for its ability to remain green throughout winter.",
+
+    "Polystichum munitum (Western Sword Fern): A vigorous, evergreen fern with long, sword-like fronds. It thrives in shady, moist forests and is common on the west coast of the U.S.",
+
+    "Onoclea sensibilis (Sensitive Fern): A fern with broad, delicate fronds that turn yellow or brown in the fall. It is sensitive to frost and typically grows in wet, boggy areas.",
+
+    "Adiantum pedatum (Maidenhair Fern): A delicate fern with fan-shaped fronds and slender, dark stems. It thrives in moist, shaded environments and is known for its elegant and graceful appearance."
+]
+            Plantae_des5 = [
+    "Cocos nucifera (Coconut Palm): A tall, tropical tree with long, feathery fronds and a smooth, upright trunk. The tree bears coconuts, which contain a fibrous husk surrounding liquid and flesh.",
+
+    "Dichelostemma capitatum (Blue Dicks): A perennial herb with narrow stems and clusters of vibrant violet-blue flowers, typically found in dry grasslands and open meadows.",
+
+    "Iris pseudacorus (Yellow Flag Iris): An aquatic perennial plant with long, slender leaves and bright yellow flowers, thriving in wetland areas and along water edges.",
+
+    "Medeola virginiana (Indian Cucumber Root): A herbaceous perennial with narrow, lance-shaped leaves and small, yellowish-green flowers, growing in moist, shaded soils in forested areas.",
+
+    "Achillea millefolium (Common Yarrow): A resilient herb with finely divided, aromatic leaves and clusters of small, white, yellow, or pink flowers, often seen in fields, meadows, and roadways.",
+
+    "Ageratina altissima (White Snakeroot): A perennial herb with large, broad leaves and dense clusters of small white flowers, growing in shady woodlands. It is known for being toxic to livestock if ingested.",
+
+    "Bellis perennis (Common Daisy): A low-growing, perennial plant with rosettes of green leaves and bright, white or pink flowers with a yellow center, often found in lawns and grasslands.",
+
+    "Cirsium arvense (Field Thistle): A spiny herbaceous plant with deeply lobed, silvery-green leaves and spiny purple flowers. It spreads aggressively through rhizomes, often becoming a weed in disturbed areas.",
+
+    "Cirsium vulgare (Bristly Thistle): A tall, spiky plant with dark green, jagged leaves and purple, spiny flowers. It is commonly found in disturbed habitats and grows rapidly in sunny areas.",
+
+    "Lobelia cardinalis (Cardinal Flower): A striking perennial with tall red flower spikes and tubular flowers that attract hummingbirds, often found in moist, shaded areas like stream banks.",
+
+    "Claytonia virginica (Virginia Springbeauty): A small, early-blooming perennial with long, narrow leaves and small pink or white flowers, commonly found in woodlands during the spring.",
+
+    "Portulaca oleracea (Purslane): A low-growing, fleshy succulent plant with thick, rounded leaves and bright yellow to pink flowers. It thrives in sunny, dry conditions and blooms in daylight.",
+
+    "Cornus florida (Flowering Dogwood): A small deciduous tree with large, showy flowers in white or pink, complemented by red berries in fall, providing food for birds.",
+
+    "Cornus sericea (Red Twig Dogwood): A deciduous shrub with striking red branches, oval leaves, and white flowers in clusters, thriving in moist soils and providing year-round ornamental interest.",
+
+    "Lonicera japonica (Japanese Honeysuckle): A fast-growing, fragrant vine with glossy, dark green leaves and tubular flowers that transition from white to yellow. It attracts various pollinators.",
+
+    "Kalmia latifolia (Mountain Laurel): A shrub with glossy, dark leaves and clusters of pink or white star-shaped flowers. It is commonly found in acidic soils and mountain woodlands.",
+
+    "Anagallis arvensis (Scarlet Pimpernel): A low-growing, spreading herb with red or orange flowers and small, ovate leaves. It thrives in dry, disturbed areas and closes its flowers in poor weather conditions.",
+
+    "Lupinus texensis (Texas Bluebonnet): A perennial plant with palmate, green leaves and spikes of blue flowers, famously associated with Texas and blooming in the spring, carpeting fields with color.",
+
+    "Fagus grandifolia (American Beech): A tall hardwood tree with smooth, gray bark and wide, oval leaves that turn golden-yellow in autumn. It is common in temperate forests.",
+
+    "Quercus alba (White Oak): A broad-leafed tree with deeply lobed leaves that transition to rich reds or purples in fall. Its light-colored bark and acorns are vital for wildlife.",
+
+    "Asclepias asperula (Spider Milkweed): A perennial plant with narrow leaves and greenish-purple star-shaped flowers, attracting a variety of pollinators, especially butterflies and bees.",
+
+    "Asclepias incarnata (Swamp Milkweed): A perennial herb with broad, soft leaves and clusters of pink to purple flowers. It grows in moist environments and is a favorite among butterflies.",
+
+    "Galium aparine (Cleavers): A sprawling herb with sticky, whorled leaves and small, star-shaped flowers. It often spreads quickly and attaches to other plants and animals via its bristly stems.",
+
+    "Campsis radicans (Trumpet Creeper): A vigorous, climbing vine with large, trumpet-shaped flowers in orange or red hues. It is commonly seen in gardens and attracts hummingbirds.",
+
+    "Glechoma hederacea (Ground Ivy): A creeping perennial with round, scalloped leaves and small, purple flowers. It flourishes in shaded areas and often spreads quickly in gardens and lawns.",
+
+    "Fraxinus americana (White Ash): A large tree with compound leaves that turn yellow in autumn and distinct gray bark. It produces samaras (winged seeds) and is common in hardwood forests.",
+
+    "Mimulus aurantiacus (Sticky Monkey Flower): A shrub with sticky, aromatic leaves and bright orange to yellow tubular flowers. It thrives in coastal habitats and attracts pollinators like bees and butterflies.",
+
+    "Plantago lanceolata (Ribwort Plantain): A perennial herb with narrow, lance-like leaves and tall spikes of small, brownish flowers. It is commonly found in meadows and disturbed soils.",
+
+    "Verbascum thapsus (Great Mullein): A biennial plant with soft, gray-green leaves and tall flower spikes with yellow blooms. It thrives in sunny, disturbed habitats and can grow up to six feet in height.",
+
+    "Callicarpa americana (American Beautyberry): A deciduous shrub with arching branches, oval leaves, and clusters of small, purple berries that appear along the stems, providing food for birds.",
+
+    "Sassafras albidum (Sassafras): A medium-sized tree with aromatic bark and unique, mitten-shaped leaves. It produces yellow-green flowers and dark blue berries in fall.",
+
+    "Oxalis pes-caprae (Bermuda Buttercup): A low-growing perennial with clover-like leaves and bright yellow, funnel-shaped flowers. It is commonly found in warm climates and can become invasive in some areas.",
+
+    "Platanus occidentalis (American Sycamore): A large tree with distinctive patchy bark and broad, palmate leaves. It grows near rivers and produces round seed balls that are eaten by wildlife.",
+
+    "Berberis thunbergii (Japanese Barberry): A deciduous shrub with spiny branches, small yellow flowers, and red berries. It is used for ornamental purposes but can become invasive in certain environments.",
+
+    "Sanguinaria canadensis (Bloodroot): A perennial plant with large, rounded leaves and white flowers. The plant's name comes from its red sap, which was historically used for medicinal purposes.",
+
+    "Aquilegia formosa (Columbine): A perennial flower with spurred blossoms in red and yellow hues. It has bluish-green, deeply divided leaves and grows in rocky or woodland areas.",
+
+    "Fragaria vesca (Wild Strawberry): A small, low-growing plant with trifoliate leaves and white flowers that produce small, sweet red berries. It is often found in meadows and woodlands.",
+
+    "Potentilla indica (Indian Strawberry): A creeping perennial with trifoliate leaves and yellow flowers that produce small, red berries resembling strawberries but not related to them.",
+
+    "Rubus ursinus (California Blackberry): A sprawling shrub with compound leaves and white to pink flowers that develop into blackberries. It grows along riverbanks and hedgerows.",
+
+    "Rhus typhina (Staghorn Sumac): A deciduous shrub with large compound leaves and clusters of fuzzy red fruit. It is commonly found in disturbed areas and provides cover and food for wildlife.",
+
+    "Acer saccharum (Sugar Maple): A large tree with palmate leaves that turn brilliant red or orange in autumn. It produces winged seeds and its sap is used to make maple syrup.",
+
+    "Hamamelis virginiana (Witch Hazel): A shrub with elliptical leaves and spidery yellow flowers that bloom in late fall or early winter. It is valued for its medicinal properties and ornamental appeal.",
+
+    "Solanum dulcamara (Bittersweet Nightshade): A perennial vine with green leaves and purple flowers, followed by bright red berries. It is toxic to both humans and animals and grows in wetlands.",
+
+    "Thuja occidentalis (Eastern Arborvitae): An evergreen tree with scale-like leaves and a conical shape. It produces small, round cones and is commonly planted as a hedge or ornamental tree.",
+
+    "Abies balsamea (Balsam Fir): A tall, evergreen conifer with flat, needle-like leaves and cylindrical cones. It is often used as a Christmas tree due to its fragrant aroma and symmetrical form.",
+
+    "Osmunda regalis (Royal Fern): A large fern with broad, feathery fronds. It thrives in moist, shaded environments, particularly in wetlands or along the banks of streams.",
+
+    "Polystichum acrostichoides (Christmas Fern): A resilient evergreen fern with lance-shaped, leathery fronds. It is often found in forested areas and remains green through the winter.",
+
+    "Polystichum munitum (Western Sword Fern): A robust, evergreen fern with long, sword-like fronds. It flourishes in shady, moist forests, particularly in the Pacific Northwest.",
+
+    "Onoclea sensibilis (Sensitive Fern): A fern with broad, delicate fronds that turn yellow or brown in fall. It is frost-sensitive and typically found in wet, boggy areas.",
+
+    "Adiantum pedatum (Maidenhair Fern): A delicate fern with fan-shaped fronds and slender, dark stems. It thrives in moist, shaded environments and is admired for its graceful appearance."
+]

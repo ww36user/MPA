@@ -1,0 +1,45 @@
+            ISIC_des1 = [
+    'This is Actinic Keratosis (AKIEC), a precancerous skin condition characterized by rough, scaly patches that may develop into squamous cell carcinoma if left untreated.',
+    'This is Basal Cell Carcinoma (BCC), a type of skin cancer that typically appears as a shiny, pearly bump or a pink growth, commonly found on sun-exposed areas.',
+    'This is Benign Keratosis (BKL), a non-cancerous skin growth that often appears as a brown, scaly patch or wart-like lesion, commonly seen in older adults.',
+    'This is Dermatofibroma (DF), a benign skin tumor often appearing as a firm, raised, brownish nodule that may develop in response to minor skin trauma.',
+    'This is Melanoma (MEL), a dangerous form of skin cancer that usually presents as an irregular, dark mole or growth, often with asymmetry, irregular borders, and varying colors.',
+    'This is Nevus (NV), commonly known as a mole, a benign growth of skin cells that can vary in color, shape, and size, though some can develop into melanoma over time.',
+    'This is Vascular Skin Lesion (VASC), which includes various types of abnormal blood vessel growths such as hemangiomas, commonly appearing as red or purple spots on the skin.'
+]
+            ISIC_des2 = [
+    'This is Actinic Keratosis (AKIEC), a precancerous skin disorder that manifests as dry, rough patches that could potentially transform into squamous cell carcinoma if left untreated.',
+    'This is Basal Cell Carcinoma (BCC), a form of skin cancer that generally appears as a smooth, pearly bump or pinkish growth, commonly seen in areas exposed to sunlight.',
+    'This is Benign Keratosis (BKL), a non-cancerous skin lesion that often appears as a brown, scaly patch or wart-like growth, typically found in elderly individuals.',
+    'This is Dermatofibroma (DF), a benign skin growth that often appears as a firm, raised, brownish bump, usually occurring after minor skin injuries.',
+    'This is Melanoma (MEL), a dangerous form of skin cancer that usually presents as an irregular, dark mole or growth, often with asymmetry, irregular borders, and varying colors.',
+    'This is Nevus (NV), commonly known as a mole, a benign growth of skin cells that can vary in color, shape, and size, though some can develop into melanoma over time.',
+    'This is Vascular Skin Lesion (VASC), which includes various types of abnormal blood vessel growths such as hemangiomas, commonly appearing as red or purple spots on the skin.'
+]
+            ISIC_des3 = [
+    'This is Actinic Keratosis (AKIEC), a precancerous skin condition characterized by the development of rough, scaly patches on sun-damaged skin. These patches may evolve into squamous cell carcinoma if not properly treated.',
+    'This is Basal Cell Carcinoma (BCC), a common form of skin cancer that often appears as a smooth, shiny bump or a pinkish growth on sun-exposed areas, typically seen on the face, neck, or hands.',
+    'This is Benign Keratosis (BKL), a non-cancerous skin growth that manifests as a brown, rough, or wart-like lesion, often appearing in older individuals. It is typically harmless but can be mistaken for more serious skin conditions.',
+    'This is Dermatofibroma (DF), a benign fibrous tumor on the skin, often appearing as a firm, raised brown or reddish-brown nodule. It typically occurs in response to skin trauma or minor injury.',
+    'This is Melanoma (MEL), a malignant and aggressive form of skin cancer that can present as an irregular, asymmetrical dark mole with uneven borders and a mixture of colors, often developing from existing moles or skin lesions.',
+    'This is Nevus (NV), commonly referred to as a mole, a benign skin growth that varies in size, shape, and color. While most are harmless, some can evolve into melanoma over time, particularly if they show irregular features.',
+    'This is Vascular Skin Lesion (VASC), which refers to a group of skin conditions involving abnormal growth of blood vessels. Examples include hemangiomas, which present as red or purple spots or lumps on the skin, often seen at birth or in early childhood.'
+]
+            ISIC_des4 = [
+    'This is Actinic Keratosis (AKIEC), a precancerous condition of the skin characterized by the formation of rough, dry patches that may evolve into squamous cell carcinoma if not treated in time. These patches are commonly found on areas exposed to prolonged sunlight.',
+    'This is Basal Cell Carcinoma (BCC), a frequent type of skin cancer that typically manifests as a smooth, waxy bump or a pinkish nodule on areas of the skin frequently exposed to the sun, such as the face, ears, or neck.',
+    'This is Benign Keratosis (BKL), a non-cancerous, often rough-textured growth on the skin, appearing as a scaly, brownish patch or wart-like lesion. These growths are commonly seen in older individuals and are usually harmless, though they may occasionally resemble more serious conditions.',
+    'This is Dermatofibroma (DF), a benign growth on the skin that forms as a firm, raised, brown or reddish-brown nodule. It typically results from minor skin injuries or trauma and is more commonly found on the limbs.',
+    'This is Melanoma (MEL), a severe and potentially life-threatening form of skin cancer. It often appears as an irregular, dark mole or growth with asymmetrical shapes, uneven borders, and multiple colors. Melanoma may develop from an existing mole or form de novo.',
+    'This is Nevus (NV), commonly known as a mole, which is a benign skin growth that can vary greatly in size, shape, and color. While most moles are not harmful, some may transform into melanoma if they exhibit irregularities in appearance or texture.',
+    'This is Vascular Skin Lesion (VASC), a condition involving abnormal blood vessel growth. Examples include hemangiomas, which appear as red, purple, or blue spots or lumps on the skin. These lesions are often congenital and may be present at birth or develop shortly after.'
+]
+            ISIC_des5 = [
+    'This is Actinic Keratosis (AKIEC), a pre-cancerous skin disorder marked by the development of rough, scaly patches that have the potential to transform into squamous cell carcinoma if left untreated. These patches are commonly found on sun-damaged skin, particularly in areas frequently exposed to ultraviolet rays.',
+    'This is Basal Cell Carcinoma (BCC), a prevalent form of skin cancer, often presenting as a smooth, shiny bump or a pinkish, raised growth, typically on sun-exposed areas such as the face, neck, and arms. Though it rarely spreads to other parts of the body, it can cause significant local damage if not addressed.',
+    'This is Benign Keratosis (BKL), a non-cancerous skin lesion that appears as a rough, scaly patch or wart-like bump. Commonly found in older adults, these growths can vary in color from brown to tan and are usually harmless, though they may occasionally resemble more concerning skin conditions.',
+    'This is Dermatofibroma (DF), a benign fibrous growth on the skin that appears as a firm, raised, reddish-brown or brown nodule. Often developing as a result of minor skin trauma or injury, these growths are typically harmless and may be found most commonly on the arms and legs.',
+    'This is Melanoma (MEL), a highly dangerous form of skin cancer, often arising as an irregularly shaped, dark-colored mole or lesion with asymmetry, uneven borders, and multiple shades. It may develop from an existing mole or appear as a new growth on the skin. Early detection is crucial as it can spread quickly if left untreated.',
+    'This is Nevus (NV), a common and typically benign skin lesion, also known as a mole. Moles can vary widely in size, shape, and pigmentation, ranging from small, brown spots to larger, darker growths. While most moles are non-cancerous, changes in their appearance could indicate a risk of melanoma.',
+    'This is Vascular Skin Lesion (VASC), a category of skin conditions involving abnormal growth of blood vessels. These lesions, such as hemangiomas, appear as red, purple, or blue spots or lumps on the skin. These growths can be congenital or develop shortly after birth and may fade or persist over time.'
+]

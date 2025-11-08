@@ -1,0 +1,60 @@
+euroSAT_des1 = [
+    "AnnualCrop: Rectangular plots with varying textures and colors, showing distinct crop rows/patterns in earth tones and seasonal greens.",
+    "Forest: Dense green canopies with uniform texture, occasional color variations from coniferous/deciduous mixes and seasonal changes.",
+    "HerbaceousVegetation: Patchy green/yellow/brown areas with irregular textures, mixing grasses and shrubs without distinct cultivation patterns.",
+    "Highway: Straight/asphalt ribbons with 2-4 parallel lanes, visible road markings, and occasional vehicles appearing as tiny colored specks.",
+    "Industrial: Large rectangular buildings with metal roofs, parking lots with white-lined spaces, smokestacks, and surrounding paved gray areas.",
+    "Pasture: Open green fields divided by fences/hedges, showing uniform grass coverage with occasional animal trails or grazing patterns.",
+    "PermanentCrop: Geometric grid-like patterns of orchards/vineyards with uniform plant spacing, visible irrigation channels and access roads.",
+    "Residential: Clusters of small rectangular buildings with red/black roofs, connected by road networks and surrounded by green yards/driveways.",
+    "River: Thin winding blue channels with meandering curves, bordered by vegetation strips and sometimes showing sediment deposits at bends.",
+    "SeaLake: Solid blue water bodies with smooth textures, varying from dark navy to turquoise shades, often bordered by beaches/rocky coastlines."
+]
+euroSAT_des2 = [
+    "AnnualCrop: Mosaic of rectilinear parcels exhibiting spectral gradations from ochre to viridescent, striated patterns revealing mechanized cultivation rhythms across growth cycles.",
+    "Forest: Velvety emerald canopies with fractal branching structures, chromatic oscillations between coniferous cobalt and deciduous chartreuse during phenological transitions.",
+    "HerbaceousVegetation: Stochastic tapestry of tawny and sage patches, undulating ecotones blending graminoids with xerophytic shrubs in successional landscapes.",
+    "Highway: Linear asphalt arteries with luminous lane demarcations, punctuated by metallic micro-particles in motion across transportation corridors.",
+    "Industrial: Cuboid complexes with galvanized rooftops reflecting solar irradiance, surrounded by tessellated parking arrays and gray-scale logistical matrices.",
+    "Pasture: Verdant phytocoenoses partitioned by dendritic fencing systems, exhibiting grazing-induced vegetation gradient from close-cropped swards to tufted islets.",
+    "PermanentCrop: Crystalline lattices of arboricultural specimens, orthogonally aligned rootstock constellations with interplant irrigation vectors.",
+    "Residential: Polyhedral dwelling clusters with terracotta prism roofs, embedded in dendritic road networks and chlorophyllous interstitial spaces.",
+    "River: Sinuous azure filaments with alluvial braiding, riparian ecotones manifesting as dendritic phreatophyte borders along fluvial meanders.",
+    "SeaLake: Planar hydroscapes transitioning from ultramarine abyssal zones to cerulean littoral fringes, bordered by sedimentary depositional landforms."
+]
+euroSAT_des3 = [
+    "AnnualCrop: Terraformed grids pulsating with chlorophyll frequencies, crop rotation cycles creating pulsar-like chromatic phase shifts across orbital planting sectors.",
+    "Forest: Photosynthetic nebulae with dendritic arm structures, chlorophyll density gradients forming emerald event horizons at canopy boundaries.",
+    "HerbaceousVegetation: Chaotic asteroid fields of C3/C4 vegetation, stochastic distribution patterns mimicking cosmic microwave background anisotropy.",
+    "Highway: Relativistic spacetime geodesics marked by luminous baryonic particles (vehicles), gravitational lensing effects near interchange wormholes.",
+    "Industrial: Dyson sphere fragments with metallic exoskeletons, thermal radiation plumes tracing industrial metabolic processes.",
+    "Pasture: Gravitationally bound grassland constellations, tidal grazing patterns creating spiral arm formations around watering singularities.",
+    "PermanentCrop: Crystalline von Neumann probes in geometric lattice configurations, self-replicating agricultural patterns across exoplanet surfaces.",
+    "Residential: O'Neill cylinder fragments with hematite-hued shielding, interconnected through spacetime fabric of urban expansion membranes.",
+    "River: Dark matter flow channels with hydrogen-oxygen plasma currents, accretion discs of sedimentary matter at meander black holes.",
+    "SeaLake: Quantum hydrospheres exhibiting wave-particle duality - placid Bose-Einstein condensate surfaces transitioning to turbulent fermionic depths."
+]
+euroSAT_des4 = [
+    "AnnualCrop: Genomic quilt stitched with transgenic color palettes, CRISPR-ed chlorophyll waveforms pulsing through fractal growth algorithms.",
+    "Forest: Mycorrhizal neural networks with dendritic impulse channels, canopy photon harvesters converting solar data packets into lignin code.",
+    "HerbaceousVegetation: Bio-pixel matrix in continuous defragmentation, chlorophyll RAM modules spontaneously rewriting their photosynthetic firmware.",
+    "Highway: Optic-fiber ganglia transmitting metallic erythrocytes, asphalt synapses flashing with vehicular action potentials at nodal junctions.",
+    "Industrial: Nanoscale assembly pods exuding catalytic exhaust plumes, carbon exoskeletons undergoing continuous mitotic replication cycles.",
+    "Pasture: Chloroplast grazing fields with ruminant bio-reactors, cellulose digestion patterns generating methane QR codes in digestive loops.",
+    "PermanentCrop: Photosynthetic microchip arrays, graft junctions functioning as organic USB ports exchanging sap-based data streams.",
+    "Residential: Holographic habitat modules with adaptive epidermal membranes, communal spaces pulsating with social topology algorithms.",
+    "River: Liquid crystal flow carrying epigenetic sediments, banks evolving as fluid-dynamic APIs regulating aquatic metadata transfer.",
+    "SeaLake: Biomimetic membrane separating saline protocols from terrestrial firewalls, coastal interfaces running erosion encryption algorithms."
+]
+euroSAT_des5 = [
+    "AnnualCrop: Terrestrial timekeepers with epidermal chromatic cycles, their striated epidermis whispering agrarian chronologies through spectral braille.",
+    "Forest: Arboreal cathedrals where cellulose psalms resonate, canopy vaults filtering sunlight into chlorophyll liturgy across moss-cushioned naves.",
+    "HerbaceousVegetation: Ephemeral epidermis of Gaia, tattooed with wind-scribed glyphs that record forgotten dialogues between soil and atmosphere.",
+    "Highway: Asphalt palimpsests imprinted with nomadic memories, their luminous scars glowing with the residual body heat of transient civilizations.",
+    "Industrial: Metallic reliquaries exhaling techno-sapience, their oxidized facades preserving industrial catechisms in rust-encrypted dialects.",
+    "Pasture: Mammalian manuscript pages where cloven-hooved quills inscribe grass-stained verses in circadian calligraphy.",
+    "PermanentCrop: Geomantic sigils drawn with perennial ink, their arboreal strokes channeling telluric energies through root-system capillaries.",
+    "Residential: Domestic carapaces secreting habitation nectars, their brick-and-mortar membranes vibrating with trapped laughter frequencies.",
+    "River: Liquid cartographers redrawing topographic ballads, their meandering stanzas carrying sedimentary footnotes to distant delta libraries.",
+    "SeaLake: Planetary palpebrae oscillating between cerulean meditations and storm-tempest rage, their saline tears balancing cosmic hydrologies."
+]

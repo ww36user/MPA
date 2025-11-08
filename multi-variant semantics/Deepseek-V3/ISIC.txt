@@ -1,0 +1,45 @@
+ISIC_des1 = [
+    "Rough, scaly patches with reddish-brown hue; irregular borders on sun-exposed skin; feels like sandpaper; may develop horn-like projections.",
+    "Shiny, pearly nodule with rolled edges; visible blood vessels; often ulcerates; flesh-colored to pink; waxy appearance.",
+    "Brownish, waxy plaque with stuck-on look; rough surface resembling cracked mud; greasy texture; well-defined edges.",
+    "Hard, raised bump that dimples when squeezed; reddish-brown; scaly center; usually small (<1cm) on legs/arms.",
+    "Irregular mole with multiple colors (brown, black, red); uneven borders; changes size/shape; may bleed or itch.",
+    "Smooth, round mole with even color; flat or slightly raised; uniform tan/brown; clear edges; often hairy.",
+    "Red/purple bump that blanches when pressed; ranges from tiny dots to large patches; soft, spongy feel."
+]
+ISIC_des2 = [
+"Actinic keratosis: Solar-induced epidermal dysplasia presenting as hyperkeratotic plaques with irregular contours on chronically sun-damaged skin, demonstrating histological features of keratinocytic atypia.",
+"Basal cell carcinoma: Slow-growing, locally invasive neoplasm characterized by nodular growth pattern with peripheral palisading and stromal retraction artifacts on histopathology.",
+"Seborrheic keratosis: Benign epidermal proliferation exhibiting acanthosis, horn pseudocysts, and papillomatosis without cellular atypia on microscopic examination.",
+"Dermatofibroma: Fibrohistiocytic proliferation of the dermis demonstrating central collagen trapping and peripheral spindle cell proliferation histologically.",
+"Malignant melanoma: Invasive proliferation of atypical melanocytes with pagetoid spread, mitotic activity, and potential for metastatic dissemination.",
+"Melanocytic nevus: Benign aggregation of nevus cells showing type A (epithelioid) to type C (neurotized) maturation sequence in the dermis.",
+"Hemangioma: Vascular malformation composed of proliferating endothelial cells forming capillary-sized channels within the superficial dermis."
+]
+ISIC_des3 = [
+"Sun's wrath etched in flesh: Cracked earth landscapes of ruddy scales marching across weathered skin, their borders wandering like drunken cartographers.",
+"Pearlescent predator: A dewy dome of flesh, its glassy surface webbed with crimson tributaries, lurking beneath - a slow but relentless consumer.",
+"Time's graffiti: Brownish smears of waxy pigment clinging to skin like melted candle wax on antique furniture, their edges crisp as paper cuts.",
+"Skin's stubborn pearl: A tiny, angry marble lodged beneath the surface, protesting with scarlet hues when provoked by curious fingers.",
+"Chaos theory in pigment: A Rorschach blot come alive, its inkwell spilled in asymmetrical fury across the epidermal canvas.",
+"Harmony incarnate: A chocolate coin of the skin universe - perfectly round, evenly tinted, with hair sprouting like prairie grass.",
+"Blood's ballet: Ruby dewdrops caught mid-splash beneath translucent skin, vanishing like ghosts under pressure's touch."
+]
+ISIC_des4 = [
+"Crusty salmon-colored patches resembling dried lakebeds, their irregular coastlines mapping decades of sun exposure on weathered skin terrain.",
+"Jewel-like growth with mother-of-pearl sheen, its surface crisscrossed by tiny crimson rivers feeding a sometimes-weeping central delta.",
+"Stuck-on brown plaques like old chewing gum on pavement, their cracked surfaces glistening with sebaceous secretions at noon angles.",
+"Button-like induration with central scale resembling a miniature volcanic crater, erupting redness when lateral pressure is applied.",
+"Asymmetrical pigment maelstrom where espresso brown swirls into coal black, with crimson flares signaling cellular mutiny beneath.",
+"Neatly stamped earth-toned macule, its borders sharp as cookie-cut edges, often sprouting wiry hairs like nature's pushpins.",
+"Burgundy-hued vascular bubbles that collapse like miniature airbags when pressed, refilling slowly like time-lapse blossoms."
+]
+ISIC_des5 = [
+"Solar scars whisper through rough, russet tablets of keratin - nature's parchment etched with years of ultraviolet indifference.",
+"A slow-motion pearl of flesh, its translucent dome webbed with ruby filaments, betraying the relentless expansion beneath.",
+"Ephemeral brown stains cling like coffee rings on skin's parchment, their cracked surfaces telling tales of epidermal senescence.",
+"Dermal defiance manifests as ruby nuggets armored with scale, flaring crimson when challenged by diagnostic manipulation.",
+"Pigmentary anarchy unfolds in a chaotic canvas where moles become mavericks, their irregular borders sketching cellular rebellion.",
+"A textbook example of cutaneous harmony - symmetrical, monochromatic, and bordered with geometric precision nature rarely achieves.",
+"Vascular ghosts bloom beneath the surface, their crimson forms vanishing like morning mist under the touch of clinical scrutiny."
+]
