@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 
 # Datesets
-You can download these datasets from this (address: https://pan.baidu.com/s/1aJvPyprYEWhHiH7TGHaNvw,
+You can download these datasets and models from this (address: https://pan.baidu.com/s/1aJvPyprYEWhHiH7TGHaNvw,
 password: MPA6).
 
 # Test for EuroSAT:
