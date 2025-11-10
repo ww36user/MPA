@@ -1,30 +1,61 @@
-import cv2
-import numpy as np
 import torch
 import torchvision.transforms as transforms
 from torchvision.datasets import ImageFolder
-from PIL import ImageFile, Image
-from PIL import ImageEnhance
+from PIL import ImageFile, ImageEnhance
 import re
 from ast import literal_eval
-from io_utils import parse_args_test
 
+# Allow loading of truncated image files without raising an error
 ImageFile.LOAD_TRUNCATED_IMAGES = True
-identity = lambda x:x
-transformtypedict=dict(Brightness=ImageEnhance.Brightness, Contrast=ImageEnhance.Contrast, Sharpness=ImageEnhance.Sharpness, Color=ImageEnhance.Color)
+
+# Identity function (used as a placeholder when no transform is applied)
+identity = lambda x: x
+
+# Map transform names to their corresponding PIL enhancement classes
+transformtypedict = dict(
+    Brightness=ImageEnhance.Brightness,
+    Contrast=ImageEnhance.Contrast,
+    Sharpness=ImageEnhance.Sharpness,
+    Color=ImageEnhance.Color
+)
 
 class ImageJitter(object):
-    def __init__(self, transformdict):
-        self.transforms = [(transformtypedict[k], transformdict[k]) for k in transformdict]
-        
-    def __call__(self, img):
-        out = img
-        randtensor = torch.rand(len(self.transforms))
-        for i, (transformer, alpha) in enumerate(self.transforms):
-            r = alpha*(randtensor[i]*2.0 -1.0) + 1
-            out = transformer(out).enhance(r).convert('RGB')
-        return out
+    """
+    Randomly jitters image attributes such as brightness, contrast, sharpness, and color.
+    Each attribute is adjusted by a random factor within a defined range.
+    """
 
+    def __init__(self, transformdict):
+        """
+        Args:
+            transformdict (dict): A dictionary where keys are transform types
+                                  ('Brightness', 'Contrast', 'Sharpness', 'Color'),
+                                  and values are the corresponding jitter strengths (float).
+        """
+        # Build a list of (transformer, alpha) pairs, where alpha controls jitter strength
+        self.transforms = [(transformtypedict[k], transformdict[k]) for k in transformdict]
+
+    def __call__(self, img):
+        """
+        Apply random jitter to the image.
+
+        Args:
+            img (PIL.Image): Input image.
+
+        Returns:
+            PIL.Image: Jittered image with random brightness, contrast, etc.
+        """
+        out = img
+        # Generate random values in [0, 1) for each transform
+        randtensor = torch.rand(len(self.transforms))
+
+        for i, (transformer, alpha) in enumerate(self.transforms):
+            # Compute random adjustment factor in [1 - alpha, 1 + alpha]
+            r = alpha * (randtensor[i] * 2.0 - 1.0) + 1
+            # Apply the enhancement and convert image to RGB
+            out = transformer(out).enhance(r).convert('RGB')
+
+        return out
 
 class SetDataset:
     def __init__(self, data_path, num_class, batch_size, transform):
@@ -64,7 +95,7 @@ class SetDataset:
 
         # print(self.classes_datasets)
         # euroSAT 数据集
-        dir_path = "/data_disk/ww/project/LDP"
+        dir_path = "PATH_TO_{multi-variant semantics}"
         model = "/gpt3.5"
         # 1. euroSAT
         if 'AnnualCrop' in self.classes_datasets:
@@ -1121,86 +1152,148 @@ class SetDataset:
 
 
 class SubDataset:
+    """
+    A simple dataset representing all images from a single class.
+    Each SubDataset corresponds to one class and contains all its samples.
+    """
     def __init__(self, sub_meta, cl, transform=transforms.ToTensor(), target_transform=identity):
+        """
+        Args:
+            sub_meta (list): A list of PIL images belonging to the same class.
+            cl (int): Class label.
+            transform (callable): Image transformation function (e.g., augmentation + normalization).
+            target_transform (callable): Optional label transformation.
+        """
         self.sub_meta = sub_meta
         self.cl = cl
         self.transform = transform
         self.target_transform = target_transform
 
-
     def __getitem__(self, i):
+        """
+        Fetch the i-th image from this class and apply transforms.
+        """
         image = self.sub_meta[i]
-
         img = self.transform(image)
         target = self.target_transform(self.cl)
-
         return img, target
 
     def __len__(self):
+        """
+        Return the number of images in this class.
+        """
         return len(self.sub_meta)
 
-
 class EpisodicBatchSampler(object):
+    """
+    Samples class indices for each few-shot learning episode.
+    Each episode randomly selects 'n_way' classes from the full set of available classes.
+    """
     def __init__(self, n_classes, n_way, n_episodes):
+        """
+        Args:
+            n_classes (int): Total number of classes in the dataset.
+            n_way (int): Number of classes per episode (N-way classification).
+            n_episodes (int): Total number of episodes to generate.
+        """
         self.n_classes = n_classes
         self.n_way = n_way
         self.n_episodes = n_episodes
 
-
-
     def __len__(self):
+        """
+        Return the total number of episodes.
+        """
         return self.n_episodes
 
     def __iter__(self):
+        """
+        Randomly sample 'n_way' unique classes per episode.
+        Yields:
+            torch.Tensor: Random permutation of class indices for one episode.
+        """
         for i in range(self.n_episodes):
             yield torch.randperm(self.n_classes)[:self.n_way]
 
     def _image_to_tensor(self, image):
-        """将PIL图像转换为Tensor"""
-        # 假设你有一个转换函数，或者直接将图片转换为Tensor
-        # 这里用ToTensor()作为例子，如果你已经有其他转换，则根据需要修改
+        """
+        Convert a PIL image to a PyTorch tensor.
+        """
         transform = transforms.ToTensor()
         image_tensor = transform(image)
         return image_tensor
 
-
 class TransformLoader:
-    def __init__(self, image_size, 
-                 normalize_param = dict(mean= [0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-                 jitter_param = dict(Brightness=0.4, Contrast=0.4, Color=0.4)):
+    """
+    Utility class to create image transformation pipelines
+    for both training (with augmentation) and testing (without augmentation).
+    """
+    def __init__(self, image_size,
+                 normalize_param=dict(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+                 jitter_param=dict(Brightness=0.4, Contrast=0.4, Color=0.4)):
+        """
+        Args:
+            image_size (int): Target image size after resizing/cropping.
+            normalize_param (dict): Normalization parameters for ImageNet-pretrained models.
+            jitter_param (dict): Parameters controlling ImageJitter augmentation.
+        """
         self.image_size = image_size
         self.normalize_param = normalize_param
         self.jitter_param = jitter_param
 
     def parse_transform(self, transform_type):
+        """
+        Convert a transform name into an actual torchvision or custom transform function.
+        """
         if transform_type == 'ImageJitter':
+            # Custom random jitter (color, brightness, etc.)
             method = ImageJitter(self.jitter_param)
             return method
-        # 其他转换保持不变
         elif transform_type == 'RandomResizedCrop':
             return getattr(transforms, transform_type)(self.image_size)
         elif transform_type == 'CenterCrop':
             return getattr(transforms, transform_type)(self.image_size)
-        elif transform_type == 'Scale':  # 修改这里
-
+        elif transform_type == 'Scale':
+            # Scale slightly larger before center cropping (for eval)
             return transforms.Resize([int(self.image_size * 1.15)])
-
-
         elif transform_type == 'Normalize':
             return getattr(transforms, transform_type)(**self.normalize_param)
         else:
+            # For all other standard torchvision transforms (e.g., ToTensor, RandomHorizontalFlip)
             return getattr(transforms, transform_type)()
-    def get_composed_transform(self, aug = True):
+
+    def get_composed_transform(self, aug=True):
+        """
+        Compose all transformations into a single pipeline.
+        Args:
+            aug (bool): Whether to include data augmentation (training) or not (validation/test).
+        Returns:
+            torchvision.transforms.Compose: Composed transformation pipeline.
+        """
         if aug:
             transform_list = ['RandomResizedCrop', 'ImageJitter', 'RandomHorizontalFlip', 'ToTensor', 'Normalize']
         else:
-            transform_list = ['Scale','CenterCrop', 'ToTensor', 'Normalize']
-        transform_funcs = [ self.parse_transform(x) for x in transform_list]
+            transform_list = ['Scale', 'CenterCrop', 'ToTensor', 'Normalize']
+
+        transform_funcs = [self.parse_transform(x) for x in transform_list]
         transform = transforms.Compose(transform_funcs)
         return transform
 
 class Eposide_DataManager():
+    """
+    Data manager that builds episode-based dataloaders for few-shot training and evaluation.
+    """
     def __init__(self, data_path, num_class, image_size, n_way=5, n_support=1, n_query=15, n_eposide=1):
+        """
+        Args:
+            data_path (str): Root path of dataset.
+            num_class (int): Total number of classes in the dataset.
+            image_size (int): Size to which all images will be resized.
+            n_way (int): Number of classes per episode.
+            n_support (int): Number of support samples per class.
+            n_query (int): Number of query samples per class.
+            n_eposide (int): Number of episodes to generate.
+        """
         super(Eposide_DataManager, self).__init__()
         self.data_path = data_path
         self.num_class = num_class
@@ -1210,24 +1303,26 @@ class Eposide_DataManager():
         self.n_eposide = n_eposide
         self.trans_loader = TransformLoader(image_size)
 
-    def get_data_loader(self, aug): #parameters that would change on train/val set
-
+    def get_data_loader(self, aug):
+        """
+        Build a DataLoader for episodic training/evaluation.
+        Args:
+            aug (bool): Whether to use data augmentation.
+        Returns:
+            torch.utils.data.DataLoader: DataLoader that yields episodes.
+        """
+        # Build the composed transform (augmentation or not)
         transform = self.trans_loader.get_composed_transform(aug)
-        #数据集
+
+        # Construct dataset (each class corresponds to one SubDataset)
         dataset = SetDataset(self.data_path, self.num_class, self.batch_size, transform)
-        #设置如何采样?
+
+        # Define the sampler that determines which classes to use per episode
         sampler = EpisodicBatchSampler(len(dataset), self.n_way, self.n_eposide)
+
+        # Loader parameters for episodic setup
         data_loader_params = dict(batch_sampler=sampler, num_workers=0, pin_memory=True)
 
-        #采样结果
+        # Build DataLoader with episodic sampling
         data_loader = torch.utils.data.DataLoader(dataset, **data_loader_params)
-        # data_loader = torch.utils.data.DataLoader(dataset,batch_size=1, **data_loader_params)
-
         return data_loader
-
-
-
-
-        
-
-        

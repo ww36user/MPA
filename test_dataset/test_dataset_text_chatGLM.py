@@ -1,31 +1,61 @@
-import cv2
-import numpy as np
 import torch
 import torchvision.transforms as transforms
 from torchvision.datasets import ImageFolder
-from PIL import ImageFile, Image
-from PIL import ImageEnhance
+from PIL import ImageFile, ImageEnhance
 import re
 from ast import literal_eval
-from io_utils import parse_args_test
 
+# Allow loading of truncated image files without raising an error
 ImageFile.LOAD_TRUNCATED_IMAGES = True
-identity = lambda x:x
-transformtypedict=dict(Brightness=ImageEnhance.Brightness, Contrast=ImageEnhance.Contrast, Sharpness=ImageEnhance.Sharpness, Color=ImageEnhance.Color)
+
+# Identity function (used as a placeholder when no transform is applied)
+identity = lambda x: x
+
+# Map transform names to their corresponding PIL enhancement classes
+transformtypedict = dict(
+    Brightness=ImageEnhance.Brightness,
+    Contrast=ImageEnhance.Contrast,
+    Sharpness=ImageEnhance.Sharpness,
+    Color=ImageEnhance.Color
+)
 
 class ImageJitter(object):
+    """
+    Randomly jitters image attributes such as brightness, contrast, sharpness, and color.
+    Each attribute is adjusted by a random factor within a defined range.
+    """
+
     def __init__(self, transformdict):
+        """
+        Args:
+            transformdict (dict): A dictionary where keys are transform types
+                                  ('Brightness', 'Contrast', 'Sharpness', 'Color'),
+                                  and values are the corresponding jitter strengths (float).
+        """
+        # Build a list of (transformer, alpha) pairs, where alpha controls jitter strength
         self.transforms = [(transformtypedict[k], transformdict[k]) for k in transformdict]
-        
+
     def __call__(self, img):
+        """
+        Apply random jitter to the image.
+
+        Args:
+            img (PIL.Image): Input image.
+
+        Returns:
+            PIL.Image: Jittered image with random brightness, contrast, etc.
+        """
         out = img
+        # Generate random values in [0, 1) for each transform
         randtensor = torch.rand(len(self.transforms))
+
         for i, (transformer, alpha) in enumerate(self.transforms):
-            r = alpha*(randtensor[i]*2.0 -1.0) + 1
+            # Compute random adjustment factor in [1 - alpha, 1 + alpha]
+            r = alpha * (randtensor[i] * 2.0 - 1.0) + 1
+            # Apply the enhancement and convert image to RGB
             out = transformer(out).enhance(r).convert('RGB')
+
         return out
-
-
 class SetDataset:
     def __init__(self, data_path, num_class, batch_size, transform):
         self.sub_meta = {}
@@ -34,7 +64,6 @@ class SetDataset:
         self.cl_list = range(self.num_class)
         for cl in self.cl_list:
             self.sub_meta[cl] = []
-
         d = ImageFolder(self.data_path)
         for i, (data, label) in enumerate(d):
             self.sub_meta[label].append(data)
@@ -47,26 +76,17 @@ class SetDataset:
         for cl in self.cl_list:
             sub_dataset = SubDataset(self.sub_meta[cl], cl, transform=transform)
             self.sub_dataloader.append(torch.utils.data.DataLoader(sub_dataset, **sub_data_loader_params))
-
         self.classes_datasets = self.d.classes
         self.cars_dict = {1: 'AM General Hummer SUV 2000', 2: 'Acura RL Sedan 2012', 3: 'Acura TL Sedan 2012', 4: 'Acura TL Type-S 2008', 5: 'Acura TSX Sedan 2012', 6: 'Acura Integra Type R 2001', 7: 'Acura ZDX Hatchback 2012', 8: 'Aston Martin V8 Vantage Convertible 2012', 9: 'Aston Martin V8 Vantage Coupe 2012', 10: 'Aston Martin Virage Convertible 2012', 11: 'Aston Martin Virage Coupe 2012', 12: 'Audi RS 4 Convertible 2008', 13: 'Audi A5 Coupe 2012', 14: 'Audi TTS Coupe 2012', 15: 'Audi R8 Coupe 2012', 16: 'Audi V8 Sedan 1994', 17: 'Audi 100 Sedan 1994', 18: 'Audi 100 Wagon 1994', 19: 'Audi TT Hatchback 2011', 20: 'Audi S6 Sedan 2011', 21: 'Audi S5 Convertible 2012', 22: 'Audi S5 Coupe 2012', 23: 'Audi S4 Sedan 2012', 24: 'Audi S4 Sedan 2007', 25: 'Audi TT RS Coupe 2012', 26: 'BMW ActiveHybrid 5 Sedan 2012', 27: 'BMW 1 Series Convertible 2012', 28: 'BMW 1 Series Coupe 2012', 29: 'BMW 3 Series Sedan 2012', 30: 'BMW 3 Series Wagon 2012', 31: 'BMW 6 Series Convertible 2007', 32: 'BMW X5 SUV 2007', 33: 'BMW X6 SUV 2012', 34: 'BMW M3 Coupe 2012', 35: 'BMW M5 Sedan 2010', 36: 'BMW M6 Convertible 2010', 37: 'BMW X3 SUV 2012', 38: 'BMW Z4 Convertible 2012', 39: 'Bentley Continental Supersports Conv. Convertible 2012', 40: 'Bentley Arnage Sedan 2009', 41: 'Bentley Mulsanne Sedan 2011', 42: 'Bentley Continental GT Coupe 2012', 43: 'Bentley Continental GT Coupe 2007', 44: 'Bentley Continental Flying Spur Sedan 2007', 45: 'Bugatti Veyron 16.4 Convertible 2009', 46: 'Bugatti Veyron 16.4 Coupe 2009', 47: 'Buick Regal GS 2012', 48: 'Buick Rainier SUV 2007', 49: 'Buick Verano Sedan 2012', 50: 'Buick Enclave SUV 2012', 51: 'Cadillac CTS-V Sedan 2012', 52: 'Cadillac SRX SUV 2012', 53: 'Cadillac Escalade EXT Crew Cab 2007', 54: 'Chevrolet Silverado 1500 Hybrid Crew Cab 2012', 55: 'Chevrolet Corvette Convertible 2012', 56: 'Chevrolet Corvette ZR1 2012', 57: 'Chevrolet Corvette Ron Fellows Edition Z06 2007', 58: 'Chevrolet Traverse SUV 2012', 59: 'Chevrolet Camaro Convertible 2012', 60: 'Chevrolet HHR SS 2010', 61: 'Chevrolet Impala Sedan 2007', 62: 'Chevrolet Tahoe Hybrid SUV 2012', 63: 'Chevrolet Sonic Sedan 2012', 64: 'Chevrolet Express Cargo Van 2007', 65: 'Chevrolet Avalanche Crew Cab 2012', 66: 'Chevrolet Cobalt SS 2010', 67: 'Chevrolet Malibu Hybrid Sedan 2010', 68: 'Chevrolet TrailBlazer SS 2009', 69: 'Chevrolet Silverado 2500HD Regular Cab 2012', 70: 'Chevrolet Silverado 1500 Classic Extended Cab 2007', 71: 'Chevrolet Express Van 2007', 72: 'Chevrolet Monte Carlo Coupe 2007', 73: 'Chevrolet Malibu Sedan 2007', 74: 'Chevrolet Silverado 1500 Extended Cab 2012', 75: 'Chevrolet Silverado 1500 Regular Cab 2012', 76: 'Chrysler Aspen SUV 2009', 77: 'Chrysler Sebring Convertible 2010', 78: 'Chrysler Town and Country Minivan 2012', 79: 'Chrysler 300 SRT-8 2010', 80: 'Chrysler Crossfire Convertible 2008', 81: 'Chrysler PT Cruiser Convertible 2008', 82: 'Daewoo Nubira Wagon 2002', 83: 'Dodge Caliber Wagon 2012', 84: 'Dodge Caliber Wagon 2007', 85: 'Dodge Caravan Minivan 1997', 86: 'Dodge Ram Pickup 3500 Crew Cab 2010', 87: 'Dodge Ram Pickup 3500 Quad Cab 2009', 88: 'Dodge Sprinter Cargo Van 2009', 89: 'Dodge Journey SUV 2012', 90: 'Dodge Dakota Crew Cab 2010', 91: 'Dodge Dakota Club Cab 2007', 92: 'Dodge Magnum Wagon 2008', 93: 'Dodge Challenger SRT8 2011', 94: 'Dodge Durango SUV 2012', 95: 'Dodge Durango SUV 2007', 96: 'Dodge Charger Sedan 2012', 97: 'Dodge Charger SRT-8 2009', 98: 'Eagle Talon Hatchback 1998', 99: 'FIAT 500 Abarth 2012', 100: 'FIAT 500 Convertible 2012', 101: 'Ferrari FF Coupe 2012', 102: 'Ferrari California Convertible 2012', 103: 'Ferrari 458 Italia Convertible 2012', 104: 'Ferrari 458 Italia Coupe 2012', 105: 'Fisker Karma Sedan 2012', 106: 'Ford F-450 Super Duty Crew Cab 2012', 107: 'Ford Mustang Convertible 2007', 108: 'Ford Freestar Minivan 2007', 109: 'Ford Expedition EL SUV 2009', 110: 'Ford Edge SUV 2012', 111: 'Ford Ranger SuperCab 2011', 112: 'Ford GT Coupe 2006', 113: 'Ford F-150 Regular Cab 2012', 114: 'Ford F-150 Regular Cab 2007', 115: 'Ford Focus Sedan 2007', 116: 'Ford E-Series Wagon Van 2012', 117: 'Ford Fiesta Sedan 2012', 118: 'GMC Terrain SUV 2012', 119: 'GMC Savana Van 2012', 120: 'GMC Yukon Hybrid SUV 2012', 121: 'GMC Acadia SUV 2012', 122: 'GMC Canyon Extended Cab 2012', 123: 'Geo Metro Convertible 1993', 124: 'HUMMER H3T Crew Cab 2010', 125: 'HUMMER H2 SUT Crew Cab 2009', 126: 'Honda Odyssey Minivan 2012', 127: 'Honda Odyssey Minivan 2007', 128: 'Honda Accord Coupe 2012', 129: 'Honda Accord Sedan 2012', 130: 'Hyundai Veloster Hatchback 2012', 131: 'Hyundai Santa Fe SUV 2012', 132: 'Hyundai Tucson SUV 2012', 133: 'Hyundai Veracruz SUV 2012', 134: 'Hyundai Sonata Hybrid Sedan 2012', 135: 'Hyundai Elantra Sedan 2007', 136: 'Hyundai Accent Sedan 2012', 137: 'Hyundai Genesis Sedan 2012', 138: 'Hyundai Sonata Sedan 2012', 139: 'Hyundai Elantra Touring Hatchback 2012', 140: 'Hyundai Azera Sedan 2012', 141: 'Infiniti G Coupe IPL 2012', 142: 'Infiniti QX56 SUV 2011', 143: 'Isuzu Ascender SUV 2008', 144: 'Jaguar XK XKR 2012', 145: 'Jeep Patriot SUV 2012', 146: 'Jeep Wrangler SUV 2012', 147: 'Jeep Liberty SUV 2012', 148: 'Jeep Grand Cherokee SUV 2012', 149: 'Jeep Compass SUV 2012', 150: 'Lamborghini Reventon Coupe 2008', 151: 'Lamborghini Aventador Coupe 2012', 152: 'Lamborghini Gallardo LP 570-4 Superleggera 2012', 153: 'Lamborghini Diablo Coupe 2001', 154: 'Land Rover Range Rover SUV 2012', 155: 'Land Rover LR2 SUV 2012', 156: 'Lincoln Town Car Sedan 2011', 157: 'MINI Cooper Roadster Convertible 2012', 158: 'Maybach Landaulet Convertible 2012', 159: 'Mazda Tribute SUV 2011', 160: 'McLaren MP4-12C Coupe 2012', 161: 'Mercedes-Benz 300-Class Convertible 1993', 162: 'Mercedes-Benz C-Class Sedan 2012', 163: 'Mercedes-Benz SL-Class Coupe 2009', 164: 'Mercedes-Benz E-Class Sedan 2012', 165: 'Mercedes-Benz S-Class Sedan 2012', 166: 'Mercedes-Benz Sprinter Van 2012', 167: 'Mitsubishi Lancer Sedan 2012', 168: 'Nissan Leaf Hatchback 2012', 169: 'Nissan NV Passenger Van 2012', 170: 'Nissan Juke Hatchback 2012', 171: 'Nissan 240SX Coupe 1998', 172: 'Plymouth Neon Coupe 1999', 173: 'Porsche Panamera Sedan 2012', 174: 'Ram C/V Cargo Van Minivan 2012', 175: 'Rolls-Royce Phantom Drophead Coupe Convertible 2012', 176: 'Rolls-Royce Ghost Sedan 2012', 177: 'Rolls-Royce Phantom Sedan 2012', 178: 'Scion xD Hatchback 2012', 179: 'Spyker C8 Convertible 2009', 180: 'Spyker C8 Coupe 2009', 181: 'Suzuki Aerio Sedan 2007', 182: 'Suzuki Kizashi Sedan 2012', 183: 'Suzuki SX4 Hatchback 2012', 184: 'Suzuki SX4 Sedan 2012', 185: 'Tesla Model S Sedan 2012', 186: 'Toyota Sequoia SUV 2012', 187: 'Toyota Camry Sedan 2012', 188: 'Toyota Corolla Sedan 2012', 189: 'Toyota 4Runner SUV 2012', 190: 'Volkswagen Golf Hatchback 2012', 191: 'Volkswagen Golf Hatchback 1991', 192: 'Volkswagen Beetle Hatchback 2012', 193: 'Volvo C30 Hatchback 2012', 194: 'Volvo 240 Sedan 1993', 195: 'Volvo XC90 SUV 2007', 196: 'smart fortwo Convertible 2012'}
-
-
     def __getitem__(self, i):
         data_list = next(iter(self.sub_dataloader[i]))
         data = data_list[0]
         label = data_list[1]
         single_label = label[0].item()
-
         class_dataset = self.classes_datasets[single_label] # 类名
-        # 构建返回的list
         list_ = []
-
-        # print(self.classes_datasets)
-        # euroSAT 数据集
-        dir_path = "/data_disk/ww/project/LDP"
+        dir_path = "PATH_TO_{multi-variant semantics}"
         model = "/ChatGLM"
-        # 1. euroSAT
         if 'AnnualCrop' in self.classes_datasets:
             target_dataset = "/euroSAT.txt"
             file_path = dir_path+model+target_dataset;
@@ -112,7 +132,6 @@ class SetDataset:
             list_.append(classes_des3)  # 描述3
             list_.append(classes_des4)  # 描述4
             list_.append(classes_des5)  # 描述5
-        # 2. CropDiesese 数据集
         elif 'Apple___Apple_scab' in self.classes_datasets:
             # CropDiesese 数据集
             cropDiesese_name1 = [
@@ -188,53 +207,6 @@ class SetDataset:
             list_.append(classes_des3)  # 描述3
             list_.append(classes_des4)  # 描述4
             list_.append(classes_des5)  # 描述5
-        # 3. ISIC 数据集
-        elif 'AKIEC' in self.classes_datasets:
-            # ISIC 数据集
-            ISIC_name1 = ['Actinic Keratosis', 'Basal Cell Carcinoma', 'Benign Keratosis', 'Dermatofibroma', 'Melanoma', 'Nevus', 'Vascular Skin Lesion']
-            ISIC_name2 = [
-    'This is Actinic Keratosis (AKIEC) skin disease.',
-    'This is Basal Cell Carcinoma (BCC) skin disease.',
-    'This is Benign Keratosis (BKL) skin disease.',
-    'This is Dermatofibroma (DF) skin disease.',
-    'This is Melanoma (MEL) skin disease.',
-    'This is Nevus (NV) skin disease.',
-    'This is Vascular Skin Lesion (VASC) skin disease.'
-]
-
-            target_dataset = "/ISIC.txt"
-            file_path = dir_path + model + target_dataset;
-
-            with open(file_path, 'r') as file:
-                content = file.read()
-
-            # 用正则匹配所有列表
-            matches = re.findall(r'ISIC_des\d+\s*=\s*(\[.*?\])', content, re.DOTALL)
-
-            # 安全地将字符串转换为列表
-            ISIC_des1 = literal_eval(matches[0])
-            ISIC_des2 = literal_eval(matches[1])
-            ISIC_des3 = literal_eval(matches[2])
-            ISIC_des4 = literal_eval(matches[3])
-            ISIC_des5 = literal_eval(matches[4])
-            class_dataset = ISIC_name1[single_label]  # 类名扩展
-            class_dataset2 = ISIC_name2[single_label]  # 类名扩展
-            classes_des1 = ISIC_des1[single_label]  # 类名描述1
-            classes_des2 = ISIC_des2[single_label]  # 类名描述2
-            classes_des3 = ISIC_des3[single_label]  # 类名描述3
-            classes_des4 = ISIC_des4[single_label]  # 类名描述4
-            classes_des5 = ISIC_des5[single_label]  # 类名描述5
-
-            list_.append(data)
-            list_.append(label)  # 类标签
-            list_.append(class_dataset)  # 类名1
-            list_.append(class_dataset2)  # 描述类名2
-            list_.append(classes_des1)  # 描述1
-            list_.append(classes_des2)  # 描述2
-            list_.append(classes_des3)  # 描述3
-            list_.append(classes_des4)  # 描述4
-            list_.append(classes_des5)  # 描述5
-        # 4. cars 数据集
         elif '99' in self.classes_datasets:
             # cars 数据集
             classes_datasets = [int(cls) for cls in self.classes_datasets]
@@ -325,7 +297,6 @@ class SetDataset:
             list_.append(classes_des3)  # 描述3
             list_.append(classes_des4)  # 描述4
             list_.append(classes_des5)  # 描述5
-        # 5. CUB数据集
         elif '004.Groove_billed_Ani' in self.classes_datasets:
             #CUB数据集
             mapped_values = ['Groove_billed_Ani', 'Rhinoceros_Auklet', 'Yellow_headed_Blackbird', 'Painted_Bunting', 'Yellow_breasted_Chat', 'Red_faced_Cormorant', 'Brown_Creeper', 'Mangrove_Cuckoo', 'Northern_Flicker', 'Olive_sided_Flycatcher', 'Frigatebird', 'European_Goldfinch', 'Pied_billed_Grebe', 'Pine_Grosbeak', 'Glaucous_winged_Gull', 'Ring_billed_Gull', 'Ruby_throated_Hummingbird', 'Pomarine_Jaeger', 'Dark_eyed_Junco', 'Green_Kingfisher', 'Red_legged_Kittiwake', 'Western_Meadowlark', 'Nighthawk', 'Hooded_Oriole', 'Brown_Pelican', 'American_Pipit', 'White_necked_Raven', 'Great_Grey_Shrike', 'Chipping_Sparrow', 'Fox_Sparrow', 'Le_Conte_Sparrow', 'Seaside_Sparrow', 'White_crowned_Sparrow', 'Barn_Swallow', 'Summer_Tanager', 'Common_Tern', 'Green_tailed_Towhee', 'Blue_headed_Vireo', 'White_eyed_Vireo', 'Black_throated_Blue_Warbler', 'Cerulean_Warbler', 'Kentucky_Warbler', 'Nashville_Warbler', 'Prairie_Warbler', 'Wilson_Warbler', 'Louisiana_Waterthrush', 'Pileated_Woodpecker', 'Downy_Woodpecker', 'House_Wren', 'Common_Yellowthroat']
@@ -417,7 +388,6 @@ class SetDataset:
             list_.append(classes_des3)  # 描述3
             list_.append(classes_des4)  # 描述4
             list_.append(classes_des5)  # 描述5
-        # Places数据集
         elif 'arena-hockey' in self.classes_datasets:
             # Places数据集
             mapped_values = ['alcove', 'amusement park', 'arcade', 'arena hockey', 'art gallery', 'assembly line', 'auditorium',
@@ -564,7 +534,6 @@ class SetDataset:
             list_.append(classes_des3)  # 描述3
             list_.append(classes_des4)  # 描述4
             list_.append(classes_des5)  # 描述5
-        # Plantae
         elif '5283' in self.classes_datasets:
             #Plantae
             Plantae_name1 = ['Cocos nucifera', 'Dichelostemma capitatum', 'Iris pseudacorus', 'Medeola virginiana', 'Achillea millefolium',
@@ -614,7 +583,6 @@ class SetDataset:
             list_.append(classes_des3)  # 描述3
             list_.append(classes_des4)  # 描述4
             list_.append(classes_des5)  # 描述5
-        # cifar-FS 数据集
         elif 'bed' in self.classes_datasets:
             # cifar-FS 数据集
             classes_cifarfs_name = [
@@ -672,7 +640,6 @@ class SetDataset:
             list_.append(classes_des3)  # 描述3
             list_.append(classes_des4)  # 描述4
             list_.append(classes_des5)  # 描述5
-        # FC-100 数据集#['baby', 'beaver', 'bee', 'beetle', 'boy', 'butterfly', 'caterpillar', 'cockroach', 'dolphin', 'fox', 'girl', 'man', 'otter', 'porcupine', 'possum', 'raccoon', 'seal', 'skunk', 'whale', 'woman']
         elif 'bee' in self.classes_datasets:
             classes_FC100_name = [
     "A photo of a baby",
@@ -728,7 +695,6 @@ class SetDataset:
             list_.append(classes_des3)  # 描述3
             list_.append(classes_des4)  # 描述4
             list_.append(classes_des5)  # 描述5
-        # miniImagenet ['nematode, nematode worm, roundworm','king crab, Alaska crab, Alaskan king crab, Alaska king crab, Paralithodes camtschatica', 'golden retriever','malamute, malemute, Alaskan malamute', 'dalmatian, coach dog, carriage dog','African hunting dog, hyena dog, Cape hunting dog, Lycaon pictus', 'lion, king of beasts, Panthera leo','ant, emmet, pismire', 'black-footed ferret, ferret, Mustela nigripes', 'bookshop, bookstore, bookstall','crate', 'cuirass', 'electric guitar', 'hourglass', 'mixing bowl', 'school bus', 'scoreboard','theater curtain, theatre curtain', 'vase', 'trifle']
         elif 'n01930112' in self.classes_datasets:
             classes_miniImagenet_name = ['nematode, nematode worm, roundworm',
                           'king crab, Alaska crab, Alaskan king crab, Alaska king crab, Paralithodes camtschatica',
@@ -794,7 +760,6 @@ class SetDataset:
             list_.append(classes_des3)  # 描述3
             list_.append(classes_des4)  # 描述4
             list_.append(classes_des5)  # 描述5
-        # tiered-Imagenet
         elif 'n01440764' in self.classes_datasets:
             classes_tieredImagenet_name = ['tench, Tinca tinca', 'goldfish, Carassius auratus',
                                          'great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias',
@@ -1046,161 +1011,156 @@ class SetDataset:
             list_.append(classes_des3)  # 描述3
             list_.append(classes_des4)  # 描述4
             list_.append(classes_des5)  # 描述5
-        # medical
-        elif '三血管气管切面' in self.classes_datasets:
-            classes_medical_name = ['Three Vessel Trachea Cross-section',
-     'Upper Abdominal Horizontal Cross-section',
-     'Thalamus Horizontal Cross-section',
-     'Lateral Ventricle Horizontal Cross-section',
-     'Right Ventricular Outflow Tract Cross-section',
-     'Four-Chamber Heart Cross-section',
-     'Cerebellum Horizontal Cross-section',
-     'Radius and Ulna Coronal Cross-section ',
-     'Left Ventricular Outflow Tract Cross-section',
-     'Femur Long Axis Cross-section',
-     'Humerus Long Axis Cross-section',
-     'Tibia and Fibula Coronal Cross-section',
-     'Lumbosacral Spine Sagittal Cross-section',
-     'Bladder Horizontal Cross-section', 'Cervical-Thoracic Spine Sagittal Cross-section']
-            class_dataset = classes_medical_name[single_label]
-
-            class_dataset2 = [
-    'This is a Three Vessel Trachea Cross-section',
-    'This is an Upper Abdominal Horizontal Cross-section',
-    'This is a Thalamus Horizontal Cross-section',
-    'This is a Lateral Ventricle Horizontal Cross-section',
-    'This is a Right Ventricular Outflow Tract Cross-section',
-    'This is a Four-Chamber Heart Cross-section',
-    'This is a Cerebellum Horizontal Cross-section',
-    'This is a Radius and Ulna Coronal Cross-section',
-    'This is a Left Ventricular Outflow Tract Cross-section',
-    'This is a Femur Long Axis Cross-section',
-    'This is a Humerus Long Axis Cross-section',
-    'This is a Tibia and Fibula Coronal Cross-section',
-    'This is a Lumbosacral Spine Sagittal Cross-section',
-    'This is a Bladder Horizontal Cross-section',
-    'This is a Cervical-Thoracic Spine Sagittal Cross-section'
-][single_label]  # 类名扩展
-            target_dataset = "/medical.txt"
-            file_path = dir_path + model + target_dataset;
-
-            with open(file_path, 'r') as file:
-                content = file.read()
-
-            # 用正则匹配所有列表
-            matches = re.findall(r'medical_des\d+\s*=\s*(\[.*?\])', content, re.DOTALL)
-
-            # 安全地将字符串转换为列表
-            medical_des1 = literal_eval(matches[0])
-            medical_des2 = literal_eval(matches[1])
-            medical_des3 = literal_eval(matches[2])
-            medical_des4 = literal_eval(matches[3])
-            medical_des5 = literal_eval(matches[4])
-
-
-            classes_des1 = medical_des1[single_label]  # 类名描述1
-            classes_des2 = medical_des2[single_label]  # 类名描述2
-            classes_des3 = medical_des3[single_label]  # 类名描述3
-            classes_des4 = medical_des4[single_label]  # 类名描述4
-            classes_des5 = medical_des5[single_label]  # 类名描述5
-
-            list_.append(data)
-            list_.append(label)  # 类标签
-            list_.append(class_dataset)  # 类名1
-            list_.append(class_dataset2)  # 描述类名2
-            list_.append(classes_des1)  # 描述1
-            list_.append(classes_des2)  # 描述2
-            list_.append(classes_des3)  # 描述3
-            list_.append(classes_des4)  # 描述4
-            list_.append(classes_des5)  # 描述5
-
         return list_
 
     def __len__(self):
         return len(self.sub_dataloader)
 
 
+
 class SubDataset:
+    """
+    A simple dataset representing all images from a single class.
+    Each SubDataset corresponds to one class and contains all its samples.
+    """
     def __init__(self, sub_meta, cl, transform=transforms.ToTensor(), target_transform=identity):
+        """
+        Args:
+            sub_meta (list): A list of PIL images belonging to the same class.
+            cl (int): Class label.
+            transform (callable): Image transformation function (e.g., augmentation + normalization).
+            target_transform (callable): Optional label transformation.
+        """
         self.sub_meta = sub_meta
         self.cl = cl
         self.transform = transform
         self.target_transform = target_transform
 
-
     def __getitem__(self, i):
+        """
+        Fetch the i-th image from this class and apply transforms.
+        """
         image = self.sub_meta[i]
-
         img = self.transform(image)
         target = self.target_transform(self.cl)
-
         return img, target
 
     def __len__(self):
+        """
+        Return the number of images in this class.
+        """
         return len(self.sub_meta)
 
-
 class EpisodicBatchSampler(object):
+    """
+    Samples class indices for each few-shot learning episode.
+    Each episode randomly selects 'n_way' classes from the full set of available classes.
+    """
     def __init__(self, n_classes, n_way, n_episodes):
+        """
+        Args:
+            n_classes (int): Total number of classes in the dataset.
+            n_way (int): Number of classes per episode (N-way classification).
+            n_episodes (int): Total number of episodes to generate.
+        """
         self.n_classes = n_classes
         self.n_way = n_way
         self.n_episodes = n_episodes
 
-
-
     def __len__(self):
+        """
+        Return the total number of episodes.
+        """
         return self.n_episodes
 
     def __iter__(self):
+        """
+        Randomly sample 'n_way' unique classes per episode.
+        Yields:
+            torch.Tensor: Random permutation of class indices for one episode.
+        """
         for i in range(self.n_episodes):
             yield torch.randperm(self.n_classes)[:self.n_way]
 
     def _image_to_tensor(self, image):
-        """将PIL图像转换为Tensor"""
-        # 假设你有一个转换函数，或者直接将图片转换为Tensor
-        # 这里用ToTensor()作为例子，如果你已经有其他转换，则根据需要修改
+        """
+        Convert a PIL image to a PyTorch tensor.
+        """
         transform = transforms.ToTensor()
         image_tensor = transform(image)
         return image_tensor
 
-
 class TransformLoader:
-    def __init__(self, image_size, 
-                 normalize_param = dict(mean= [0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-                 jitter_param = dict(Brightness=0.4, Contrast=0.4, Color=0.4)):
+    """
+    Utility class to create image transformation pipelines
+    for both training (with augmentation) and testing (without augmentation).
+    """
+    def __init__(self, image_size,
+                 normalize_param=dict(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+                 jitter_param=dict(Brightness=0.4, Contrast=0.4, Color=0.4)):
+        """
+        Args:
+            image_size (int): Target image size after resizing/cropping.
+            normalize_param (dict): Normalization parameters for ImageNet-pretrained models.
+            jitter_param (dict): Parameters controlling ImageJitter augmentation.
+        """
         self.image_size = image_size
         self.normalize_param = normalize_param
         self.jitter_param = jitter_param
 
     def parse_transform(self, transform_type):
+        """
+        Convert a transform name into an actual torchvision or custom transform function.
+        """
         if transform_type == 'ImageJitter':
+            # Custom random jitter (color, brightness, etc.)
             method = ImageJitter(self.jitter_param)
             return method
-        # 其他转换保持不变
         elif transform_type == 'RandomResizedCrop':
             return getattr(transforms, transform_type)(self.image_size)
         elif transform_type == 'CenterCrop':
             return getattr(transforms, transform_type)(self.image_size)
-        elif transform_type == 'Scale':  # 修改这里
-
+        elif transform_type == 'Scale':
+            # Scale slightly larger before center cropping (for eval)
             return transforms.Resize([int(self.image_size * 1.15)])
-
-
         elif transform_type == 'Normalize':
             return getattr(transforms, transform_type)(**self.normalize_param)
         else:
+            # For all other standard torchvision transforms (e.g., ToTensor, RandomHorizontalFlip)
             return getattr(transforms, transform_type)()
-    def get_composed_transform(self, aug = True):
+
+    def get_composed_transform(self, aug=True):
+        """
+        Compose all transformations into a single pipeline.
+        Args:
+            aug (bool): Whether to include data augmentation (training) or not (validation/test).
+        Returns:
+            torchvision.transforms.Compose: Composed transformation pipeline.
+        """
         if aug:
             transform_list = ['RandomResizedCrop', 'ImageJitter', 'RandomHorizontalFlip', 'ToTensor', 'Normalize']
         else:
-            transform_list = ['Scale','CenterCrop', 'ToTensor', 'Normalize']
-        transform_funcs = [ self.parse_transform(x) for x in transform_list]
+            transform_list = ['Scale', 'CenterCrop', 'ToTensor', 'Normalize']
+
+        transform_funcs = [self.parse_transform(x) for x in transform_list]
         transform = transforms.Compose(transform_funcs)
         return transform
 
 class Eposide_DataManager():
+    """
+    Data manager that builds episode-based dataloaders for few-shot training and evaluation.
+    """
     def __init__(self, data_path, num_class, image_size, n_way=5, n_support=1, n_query=15, n_eposide=1):
+        """
+        Args:
+            data_path (str): Root path of dataset.
+            num_class (int): Total number of classes in the dataset.
+            image_size (int): Size to which all images will be resized.
+            n_way (int): Number of classes per episode.
+            n_support (int): Number of support samples per class.
+            n_query (int): Number of query samples per class.
+            n_eposide (int): Number of episodes to generate.
+        """
         super(Eposide_DataManager, self).__init__()
         self.data_path = data_path
         self.num_class = num_class
@@ -1210,22 +1170,29 @@ class Eposide_DataManager():
         self.n_eposide = n_eposide
         self.trans_loader = TransformLoader(image_size)
 
-    def get_data_loader(self, aug): #parameters that would change on train/val set
-
+    def get_data_loader(self, aug):
+        """
+        Build a DataLoader for episodic training/evaluation.
+        Args:
+            aug (bool): Whether to use data augmentation.
+        Returns:
+            torch.utils.data.DataLoader: DataLoader that yields episodes.
+        """
+        # Build the composed transform (augmentation or not)
         transform = self.trans_loader.get_composed_transform(aug)
-        #数据集
+
+        # Construct dataset (each class corresponds to one SubDataset)
         dataset = SetDataset(self.data_path, self.num_class, self.batch_size, transform)
-        #设置如何采样?
+
+        # Define the sampler that determines which classes to use per episode
         sampler = EpisodicBatchSampler(len(dataset), self.n_way, self.n_eposide)
+
+        # Loader parameters for episodic setup
         data_loader_params = dict(batch_sampler=sampler, num_workers=0, pin_memory=True)
 
-        #采样结果
+        # Build DataLoader with episodic sampling
         data_loader = torch.utils.data.DataLoader(dataset, **data_loader_params)
-        # data_loader = torch.utils.data.DataLoader(dataset,batch_size=1, **data_loader_params)
-
         return data_loader
-
-
 
 
         
