@@ -18,10 +18,10 @@ password: MPA6).
 # Test for EuroSAT:
 ```
 - 5-way 1-shot:
-CUDA_VISIBLE_DEVICES=0 python test.py --n_support 1 --seed 1111 --current_data_path ./target_domain/EuroSAT  --current_class 10 --test_n_eposide 100;
+python test.py --n_support 1 --seed 1111 --current_data_path ./target_domain/EuroSAT  --current_class 10 --test_n_eposide 100;
 
 - 5-way 5-shot:
-CUDA_VISIBLE_DEVICES=0 python test.py --n_support 5 --seed 1111 --current_data_path ./target_domain/EuroSAT  --current_class 10 --test_n_eposide 100;
+python test.py --n_support 5 --seed 1111 --current_data_path ./target_domain/EuroSAT  --current_class 10 --test_n_eposide 100;
 
 ```
 --current_data_path is used to specify the dataset location, and --current_class defines the number of classes in the dataset.
