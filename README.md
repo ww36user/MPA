@@ -11,7 +11,7 @@ pip install -r requirements.txt
 
 
 
-# Datesets
+# Datesets and models
 You can download these datasets and models from this (address: https://pan.baidu.com/s/1aJvPyprYEWhHiH7TGHaNvw,
 password: MPA6).
 
